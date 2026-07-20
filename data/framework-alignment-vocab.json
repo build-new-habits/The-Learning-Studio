@@ -1,0 +1,12 @@
+{
+  "version": "20/07/26 v1",
+  "vocabulary": [
+    "Rosenshine",
+    "UDL",
+    "QFT",
+    "WCAG",
+    "Digital Skills Framework",
+    "DigCompEdu"
+  ]
+  // NOTE: WalkThrus is explicitly NOT on this list. It is a commercial, trademarked product whose value is the step-card format itself. Adding it creates a stylistic-imitation risk. Reference underlying concepts via open source instead.
+}
