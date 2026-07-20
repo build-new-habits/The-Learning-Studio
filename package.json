@@ -1,0 +1,12 @@
+{
+  "name": "the-learning-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Digital Learning Pyramid Resource Hub - schema and content validation tooling",
+  "scripts": {
+    "validate": "node scripts/validate.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
+  }
+}
