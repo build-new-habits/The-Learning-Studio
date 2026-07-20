@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "20/07/26 v1",
+  "$id": "https://learning-studio.local/schemas/route.schema.json",
   "title": "Finder Route",
   "type": "object",
   "properties": {
