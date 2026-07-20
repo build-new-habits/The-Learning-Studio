@@ -1,0 +1,19 @@
+/* ==========================================================================
+   The Learning Studio — Design Tokens
+   20/07/26 v1
+   ========================================================================== */
+
+:root {
+  /* Colour — exactly these four values, do not substitute or invent alternatives */
+  --color-ink: #1F4B57;      /* body text / headings */
+  --color-action: #0F7A6B;   /* buttons, links — white text on top */
+  --color-surface: #F4F7F6;  /* card/section backgrounds only */
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-body: 'Atkinson Hyperlegible', sans-serif;
+
+  /* Layout */
+  --touch-target-min: 44px;
+  --line-length-max: 75ch;
+}
