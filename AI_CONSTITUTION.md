@@ -14,3 +14,5 @@
 * Evidence Standard. Any claim that something was tested, validated, or verified must be accompanied by the raw, unedited output of that test — command run, full output pasted, nothing summarised or narrated. A description of expected behaviour is not evidence and must not be presented as though it were. If something wasn't actually run, say so explicitly rather than describing what running it would show.
 
 * Gemini has no persistent file access and no ability to execute this project's Node.js tooling. Never ask it to run, test, demonstrate, or verify code or schema behaviour. Only ask it to write or draft. All verification happens via GitHub Actions or a human/Claude session with real execution access.
+
+* any file destined for commit gets a "strip all citation/grounding markup" pass before it's called finished.
