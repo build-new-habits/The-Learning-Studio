@@ -1,0 +1,256 @@
+/* ==========================================================================
+   The Learning Studio — Base Styles
+   20/07/26 v1
+
+   Depends on assets/css/tokens.css being loaded first.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-white);
+  line-height: 1.5;
+}
+
+/* ----- Skip link ----- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: var(--color-action);
+  color: var(--color-white);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ----- Visually hidden (screen-reader only) ----- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ----- Header / identity ----- */
+
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-surface);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-ink);
+}
+
+.strapline {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  color: var(--color-ink);
+  max-width: var(--line-length-max);
+}
+
+/* ----- Main / layout ----- */
+
+main {
+  padding: 2rem 1.5rem;
+}
+
+.content-container {
+  max-width: var(--line-length-max);
+  margin: 0 auto;
+}
+
+/* ----- Navigation ----- */
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-action);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--color-action);
+  border-radius: 0.25rem;
+}
+
+.main-nav a:hover {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+/* ----- Generic links ----- */
+
+a {
+  color: var(--color-action);
+}
+
+/* ----- Focus states — visible, distinct from hover ----- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+/* ----- Accessibility settings controls ----- */
+
+.a11y-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.a11y-controls button {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.a11y-controls button[aria-pressed="true"] {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-ink);
+}
+
+.a11y-controls button:hover {
+  background-color: var(--color-surface);
+}
+
+/* ----- Text size steps (classes applied by accessibility.js) ----- */
+
+body.text-size-medium {
+  font-size: 1.125rem;
+}
+
+body.text-size-large {
+  font-size: 1.25rem;
+}
+
+/* ----- High contrast theme — inverted, using only the four tokens above ----- */
+
+body.theme-high-contrast {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .site-header {
+  background-color: var(--color-ink);
+  border-bottom-color: var(--color-action);
+}
+
+body.theme-high-contrast .site-title,
+body.theme-high-contrast .strapline {
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .main-nav a {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border-color: var(--color-white);
+}
+
+body.theme-high-contrast .main-nav a:hover {
+  background-color: var(--color-action);
+  color: var(--color-white);
+  border-color: var(--color-action);
+}
+
+body.theme-high-contrast .a11y-controls button {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-high-contrast .a11y-controls button[aria-pressed="true"] {
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+}
+
+body.theme-high-contrast a:focus-visible,
+body.theme-high-contrast button:focus-visible,
+body.theme-high-contrast a:focus,
+body.theme-high-contrast button:focus {
+  outline-color: var(--color-white);
+}
+
+/* ----- Motion ----- */
+
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button {
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Manual override — driven by the reduced-motion toggle in accessibility.js,
+   independent of the OS-level prefers-reduced-motion setting above */
+body.motion-reduced *,
+body.motion-reduced *::before,
+body.motion-reduced *::after {
+  transition: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
