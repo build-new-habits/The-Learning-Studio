@@ -10,3 +10,5 @@
 * Framework alignment values must come from the pre-approved vocabulary list only[cite: 2]
 * All colour/contrast choices must be tested with a real tool, not eyeballed[cite: 2]
 * Every session ends with a handoff: files changed, reason, tests run, assumptions, unresolved risks, next action[cite: 2]
+
+*Evidence Standard. Any claim that something was tested, validated, or verified must be accompanied by the raw, unedited output of that test — command run, full output pasted, nothing summarised or narrated. A description of expected behaviour is not evidence and must not be presented as though it were. If something wasn't actually run, say so explicitly rather than describing what running it would show.
