@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "20/07/26 v1",
+  "title": "Digital Practice Card",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "title": { "type": "string" },
+    "staff_situations": { "type": "array", "items": { "type": "string" } },
+    "underlying_needs": { "type": "array", "items": { "type": "string" } },
+    "pyramid_layers": { "type": "array", "items": { "type": "string" } },
+    "tech_routes": { "type": "array", "items": { "type": "string" } },
+    "digital_practices": { "type": "array", "items": { "type": "string" } },
+    "learning_lenses": {
+      "type": "object",
+      "properties": {
+        "accessibility": { "type": "array", "items": { "type": "string" } },
+        "inclusive_practice": { "type": "array", "items": { "type": "string" } },
+        "trauma_informed": { "type": "array", "items": { "type": "string" } },
+        "udl": { "type": "array", "items": { "type": "string" } },
+        "evidence_informed": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["accessibility", "inclusive_practice"]
+    },
+    "framework_alignment": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_area": { "type": "string" },
+    "last_reviewed": { "type": "string" },
+    "review_status": { "type": "string", "enum": ["Draft", "Current", "Needs review", "Archived"] },
+    "downloads": { "type": "array", "items": { "type": "string" } },
+    "related_cards": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": [
+    "id", "version", "title", "staff_situations", "learning_lenses", "framework_alignment", "source_area", "last_reviewed", "review_status"
+  ]
+}
