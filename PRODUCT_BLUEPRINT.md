@@ -1,3 +1,4 @@
+[PRODUCT_BLUEPRINT.md](https://github.com/user-attachments/files/30187522/PRODUCT_BLUEPRINT.md)
 # The Learning Studio
 ## Digital Learning Pyramid Resource Hub — Product Blueprint v6
 17/07/26 v6 | Synthesis: positioning, design language, and the v5 review fixes | Build brief for Gemini + GitHub
