@@ -7,6 +7,6 @@
     "WCAG",
     "Digital Skills Framework",
     "DigCompEdu"
-  ]
-  // NOTE: WalkThrus is explicitly NOT on this list. It is a commercial, trademarked product whose value is the step-card format itself. Adding it creates a stylistic-imitation risk. Reference underlying concepts via open source instead.
+  ],
+  "notes": "WalkThrus is explicitly NOT on this list. It is a commercial, trademarked product whose value is the step-card format itself. Adding it creates a stylistic-imitation risk. Reference underlying concepts via open source instead."
 }
