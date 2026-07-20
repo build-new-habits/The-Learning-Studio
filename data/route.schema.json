@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "20/07/26 v1",
+  "title": "Finder Route",
+  "type": "object",
+  "properties": {
+    "route_id": { "type": "string" },
+    "version": { "type": "string" },
+    "staff_question": { "type": "string" },
+    "underlying_digital_need": { "type": "string" },
+    "suggested_cards": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["route_id", "version", "staff_question", "underlying_digital_need", "suggested_cards"]
+}
