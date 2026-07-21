@@ -1,0 +1,41 @@
+* content/digital-foundations/insights-grades-reflect.json (21/07/26 v1)
+*
+{
+  "id": "insights-grades-reflect",
+  "version": "21/07/26 v1",
+  "title": "Use Insights, Grades and Reflect to check how learners are doing",
+  "staff_situations": ["How do I use Insights, Grades and Reflect to check how learners are doing?"],
+  "underlying_needs": [
+    "A digital way to see engagement, completion and grade patterns across a group, not only individual conversations",
+    "A low-friction way for learners to share how they're doing, without needing to say it out loud in front of peers",
+    "Early, aggregate signals that point to where a closer look or a check-in might help"
+  ],
+  "pyramid_layers": ["Digital Foundations"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "Insights dashboard",
+    "Grades overview",
+    "Reflect check-ins",
+    "engagement and completion trends"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Reflect check-ins give a learner who finds speaking up difficult a private, low-pressure way to share how they're doing"
+    ],
+    "inclusive_practice": [
+      "Aggregate Insights data highlights patterns across the group rather than singling out one learner",
+      "Reflect gives every learner an equal, private channel to communicate, not only those confident enough to say it out loud"
+    ],
+    "trauma_informed": [
+      "Reflect avoids a learner needing to publicly disclose how they're feeling in front of peers"
+    ]
+  },
+  "framework_alignment": [
+    "Digital Skills Framework: learner analytics and check-ins",
+    "QFT: checking understanding"
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": []
+}
