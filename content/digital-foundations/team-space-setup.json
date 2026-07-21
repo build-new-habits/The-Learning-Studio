@@ -1,0 +1,40 @@
+* content/digital-foundations/team-space-setup.json (21/07/26 v1)
+*
+{
+  "id": "team-space-setup",
+  "version": "21/07/26 v1",
+  "title": "Set up a Team space for your group",
+  "staff_situations": ["How do I set up a Team space for my group?"],
+  "underlying_needs": [
+    "A shared, organised space where a group can find posts, files and conversations in one place",
+    "A consistent structure learners can navigate without re-learning it every time they log in",
+    "Access set correctly from the start, so the right people can see and use the space and no one else"
+  ],
+  "pyramid_layers": ["Digital Foundations"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "Team creation",
+    "channel structure",
+    "naming conventions",
+    "owner and member roles",
+    "pinned key resources"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Consistent channel names and structure reduce the navigation effort for learners using a screen reader or switch access",
+      "A predictable layout means a learner doesn't have to relearn the space each time they return to it"
+    ],
+    "inclusive_practice": [
+      "A well-organised shared space benefits every learner in the group, not only those who ask where something is",
+      "Clear structure reduces how often a learner needs to ask staff to repeat navigation instructions"
+    ]
+  },
+  "framework_alignment": [
+    "Digital Skills Framework: Team and group setup",
+    "WCAG: consistent navigation"
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": ["organise-posts-and-files"]
+}
