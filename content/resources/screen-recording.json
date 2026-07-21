@@ -1,0 +1,17 @@
+{
+  "id": "screen-recording",
+  "version": "21/07/26 v1",
+  "title": "Recording your screen to create a reusable video",
+  "what_it_is": "Screen recording captures everything on your screen, and optionally your voice and webcam, as a video file that can be shared or rewatched.",
+  "why_use_it": "A recording lets learners revisit an explanation at their own pace instead of relying on catching it once, live. It is reusable across cohorts, saving the need to repeat the same explanation each time it comes up.",
+  "how_to": [
+    "Open your screen recording tool, for example Teams, Clipchamp, or your device's built-in recorder.",
+    "Choose whether to record the full screen, an application window, or a specific area.",
+    "Start recording, then talk through what you're doing as you go.",
+    "Stop the recording and save it somewhere learners can access, such as a Team channel.",
+    "Add captions or a transcript before sharing, where the tool supports it."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft"
+}
