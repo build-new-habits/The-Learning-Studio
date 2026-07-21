@@ -1,0 +1,38 @@
+{
+  "id": "show-thinking",
+  "version": "21/07/26 v1",
+  "title": "Show your thinking with digital tools",
+  "staff_situations": ["How do I show learners what I'm thinking?"],
+  "underlying_needs": [
+    "Making expert thinking visible to learners rather than just the finished answer",
+    "Creating a reusable record of modelled thinking instead of a one-off, in-the-moment explanation",
+    "Giving learners something to rewatch or re-read when working independently"
+  ],
+  "pyramid_layers": ["Digital Inclusion"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "visualiser",
+    "screen recording",
+    "OneNote annotation",
+    "annotated slides",
+    "think-aloud video"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Screen recordings and think-aloud videos can carry captions and a transcript",
+      "Annotated slides give a visual record to sit alongside spoken explanation"
+    ],
+    "inclusive_practice": [
+      "A reusable recording lets a learner revisit modelled thinking at their own pace",
+      "Supports learners who need to see a process more than once before attempting it themselves"
+    ]
+  },
+  "framework_alignment": [
+    "UDL: multiple means of representation",
+    "WCAG: text alternatives"
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": ["catch-up-absent-learners"]
+}
