@@ -1,0 +1,38 @@
+{
+  "id": "catch-up-absent-learners",
+  "version": "21/07/26 v1",
+  "title": "Catch up absent learners with digital tools",
+  "staff_situations": ["How do I catch up absent learners?"],
+  "underlying_needs": [
+    "Capturing a lesson or explanation digitally so it can be accessed later",
+    "Sharing what was missed in a format a learner can work through independently",
+    "Checking understanding once a learner has caught up on their own"
+  ],
+  "pyramid_layers": ["Digital Inclusion"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "Teams recap post",
+    "photo capture",
+    "screen or audio explanation",
+    "accessible summary",
+    "retrieval questions from lesson notes"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Accessible summaries can be read with a screen reader or text-to-speech tool",
+      "Screen or audio explanations give a learner more than one way to catch up"
+    ],
+    "inclusive_practice": [
+      "Learners catch up independently without singling themselves out by asking what they missed",
+      "Reduces the gap between an absent and a present learner without extra staff time per learner"
+    ]
+  },
+  "framework_alignment": [
+    "WCAG: text alternatives",
+    "Digital Skills Framework: digital capture and sharing tools"
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": ["show-thinking"]
+}
