@@ -1,0 +1,16 @@
+{
+  "id": "onenote-annotation",
+  "version": "21/07/26 v1",
+  "title": "Annotating in OneNote to show working live",
+  "what_it_is": "OneNote's digital ink tools let you write, draw or annotate directly on a page using a stylus, mouse or touchscreen, visible to anyone viewing or sharing that page.",
+  "why_use_it": "It gives a clear, legible on-screen record of working that would otherwise be written on paper or a physical whiteboard and then lost. The page stays saved and shareable afterwards, so learners can return to it later.",
+  "how_to": [
+    "Open the relevant page in a Class or Staff Notebook.",
+    "Select the Draw tab and choose a pen or highlighter.",
+    "Annotate directly on the page while sharing your screen or projecting.",
+    "Save, or let it auto-save, so the annotated page remains available afterwards."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft"
+}
