@@ -1,6 +1,7 @@
 /* ==========================================================================
    The Learning Studio — Design Tokens
-   20/07/26 v1
+   21/07/26 v2 — Session 7 adds the Settings Panel token block below.
+   Original four colours and base tokens are unchanged.
    ========================================================================== */
 
 :root {
@@ -16,4 +17,76 @@
   /* Layout */
   --touch-target-min: 44px;
   --line-length-max: 75ch;
+}
+
+/* ==========================================================================
+   SESSION 7 ADDITIONS — Settings Panel
+   21/07/26 v2
+
+   Colour scheme note: the brief asked for Default / Warm / Dark / High
+   contrast, derived from the four tokens above wherever possible.
+   - Default and Dark both reuse the existing ink/white pairing (already
+     built as body.theme-high-contrast in base.css/card.css/finder.css) —
+     verified 9.54:1, exceeds AAA. No new colour needed for either.
+   - Dark and High contrast are mapped to the SAME visual treatment
+     (body.theme-high-contrast) rather than inventing a second dark
+     variant. Our four-token palette only has one ink/white maximum-
+     contrast pairing — a true 21:1 black/white mode would need a new
+     colour with no basis in the palette, and the brief says not to
+     invent one without unavoidable need. Flagged for PM: confirm this
+     reuse is acceptable, or specify what should visually distinguish
+     the two if not.
+   - Warm cannot be built from ink/action/surface/white — all four are
+     cool-toned and combining them cannot produce a warm background.
+     This is the one unavoidable 5th colour, named and justified here:
+   ========================================================================== */
+
+:root {
+  /* --color-warm-surface: warm cream background for the Warm scheme,
+     paired with the existing --color-ink text colour.
+     Contrast verified by calculation (WCAG relative luminance formula,
+     not eyeballed): ink (#1F4B57) on #FBF3E7 = 8.66:1 — exceeds AAA
+     (7:1) for normal text, comfortably clears AA (4.5:1). */
+  --color-warm-surface: #FBF3E7;
+
+  /* Font stacks for the Font control. All three additions are
+     system-safe stacks — no font files loaded, no new licence or
+     network dependency this session. They render using whatever the
+     user's own device already has installed and fall back gracefully
+     to the generic family if not. */
+  --font-dyslexia: 'Comic Sans MS', 'Comic Sans', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  /* Text size / line spacing / letter spacing — slider ranges and
+     defaults, matching the reference pattern's shown values */
+  --text-size-min: 14px;
+  --text-size-default: 17px;
+  --text-size-max: 24px;
+  --line-spacing-min: 1.2;
+  --line-spacing-default: 1.75;
+  --line-spacing-max: 2.2;
+  --letter-spacing-min: 0em;
+  --letter-spacing-default: 0em;
+  --letter-spacing-max: 0.12em;
+
+  /* Panel chrome — all derived from --color-ink / --color-action via
+     alpha, not new hex values. Each alpha was picked against a real
+     contrast calculation, not eyeballed:
+     - --panel-border-strong (ink @ 60% alpha on white) = 3.26:1 —
+       clears WCAG 1.4.11 non-text 3:1, used for toggle-track-off and
+       unselected pill borders, both of which carry meaning.
+     - --panel-border (ink @ 25% alpha) is decorative only (thin
+       dividers) — no contrast minimum applies, not used for meaning.
+     - --color-ink-muted (ink @ 75% alpha on white) = 4.76:1 — clears
+       AA 4.5:1 for small print, used for helper/description text.
+     - --panel-active-tint (action @ 12% alpha) is a background only;
+       the text sitting on it uses solid --color-ink at 8.09:1, not
+       action, because action-on-tint alone only reached ~4.4–4.6:1 —
+       too close to the AA line to rely on at small sizes. */
+  --panel-border: rgba(31, 75, 87, 0.25);
+  --panel-border-strong: rgba(31, 75, 87, 0.60);
+  --color-ink-muted: rgba(31, 75, 87, 0.75);
+  --panel-active-tint: rgba(15, 122, 107, 0.12);
+  --panel-overlay: rgba(0, 0, 0, 0.45); /* neutral modal scrim, not a brand colour */
 }
