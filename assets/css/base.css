@@ -1,6 +1,10 @@
 /* ==========================================================================
    The Learning Studio — Base Styles
-   20/07/26 v1
+   21/07/26 v2 — Session 7: body text now driven by user-controllable
+   CSS variables (size/line-height/letter-spacing) instead of fixed
+   values; old 3-button a11y-controls / text-size-step rules removed
+   and replaced by assets/css/settings.css. body.theme-high-contrast
+   and body.motion-reduced are UNCHANGED and reused by the new panel.
 
    Depends on assets/css/tokens.css being loaded first.
    ========================================================================== */
@@ -16,7 +20,55 @@ body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background-color: var(--color-white);
-  line-height: 1.5;
+  font-size: var(--user-text-size, var(--text-size-default));
+  line-height: var(--user-line-height, var(--line-spacing-default));
+  letter-spacing: var(--user-letter-spacing, var(--letter-spacing-default));
+}
+
+/* ----- Font control (Settings panel) ----- */
+
+body.font-dyslexia {
+  font-family: var(--font-dyslexia);
+}
+
+body.font-serif {
+  font-family: var(--font-serif);
+}
+
+body.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ----- Warm colour scheme (Settings panel) — page-level only.
+   Card and Finder surfaces are untouched this session (out of scope
+   per the brief); they keep their existing --color-surface/white
+   backgrounds under Warm, which still passes contrast, just doesn't
+   pick up the cream tint. Flagged as a possible follow-up polish. ----- */
+
+body.scheme-warm {
+  background-color: var(--color-warm-surface);
+}
+
+body.scheme-warm .site-header {
+  background-color: var(--color-warm-surface);
+}
+
+/* ----- Enhanced focus outlines (Settings panel toggle) ----- */
+
+body.enhanced-focus a:focus-visible,
+body.enhanced-focus button:focus-visible,
+body.enhanced-focus a:focus,
+body.enhanced-focus button:focus {
+  outline-width: 5px;
+  outline-offset: 4px;
+}
+
+/* ----- Underline all links (Settings panel toggle) ----- */
+
+body.underline-links .main-nav a,
+body.underline-links .finder-option,
+body.underline-links .immersive-reader-link {
+  text-decoration: underline;
 }
 
 /* ----- Skip link ----- */
@@ -137,7 +189,8 @@ button:focus {
   outline-offset: 3px;
 }
 
-/* ----- Accessibility settings controls ----- */
+/* ----- Settings trigger button (opens the slide-in panel — see
+   assets/css/settings.css for the panel itself) ----- */
 
 .a11y-controls {
   display: flex;
@@ -146,7 +199,7 @@ button:focus {
   gap: 0.5rem;
 }
 
-.a11y-controls button {
+#settings-trigger {
   min-height: var(--touch-target-min);
   min-width: var(--touch-target-min);
   padding: 0.5rem 0.75rem;
@@ -159,24 +212,8 @@ button:focus {
   cursor: pointer;
 }
 
-.a11y-controls button[aria-pressed="true"] {
-  background-color: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-ink);
-}
-
-.a11y-controls button:hover {
+#settings-trigger:hover {
   background-color: var(--color-surface);
-}
-
-/* ----- Text size steps (classes applied by accessibility.js) ----- */
-
-body.text-size-medium {
-  font-size: 1.125rem;
-}
-
-body.text-size-large {
-  font-size: 1.25rem;
 }
 
 /* ----- High contrast theme — inverted, using only the four tokens above ----- */
@@ -208,15 +245,10 @@ body.theme-high-contrast .main-nav a:hover {
   border-color: var(--color-action);
 }
 
-body.theme-high-contrast .a11y-controls button {
+body.theme-high-contrast #settings-trigger {
   background-color: var(--color-ink);
   color: var(--color-white);
   border-color: var(--color-white);
-}
-
-body.theme-high-contrast .a11y-controls button[aria-pressed="true"] {
-  background-color: var(--color-action);
-  border-color: var(--color-action);
 }
 
 body.theme-high-contrast a:focus-visible,
@@ -245,8 +277,9 @@ body.theme-high-contrast button:focus {
   }
 }
 
-/* Manual override — driven by the reduced-motion toggle in accessibility.js,
-   independent of the OS-level prefers-reduced-motion setting above */
+/* Manual override — driven by the reduced-motion toggle in settings.js
+   (Session 7), independent of the OS-level prefers-reduced-motion
+   setting above */
 body.motion-reduced *,
 body.motion-reduced *::before,
 body.motion-reduced *::after {
