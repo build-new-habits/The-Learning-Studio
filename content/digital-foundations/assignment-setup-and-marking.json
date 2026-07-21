@@ -1,0 +1,40 @@
+* content/digital-foundations/assignment-setup-and-marking.json (21/07/26 v1)
+*
+{
+  "id": "assignment-setup-and-marking",
+  "version": "21/07/26 v1",
+  "title": "Set up and mark an Assignment",
+  "staff_situations": ["How do I set up and mark an Assignment?"],
+  "underlying_needs": [
+    "A clear, consistent way to set work, collect submissions and return feedback in one place",
+    "Reliable digital marking that avoids lost paperwork and gives learners a saved record of feedback",
+    "A way to track completion and grades across the group without chasing individual submissions"
+  ],
+  "pyramid_layers": ["Digital Foundations"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "Assignment creation",
+    "rubrics",
+    "due dates and reminders",
+    "inline feedback and annotation",
+    "returning grades"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Digital rubrics and inline feedback can be read with a screen reader or text-to-speech tool",
+      "Learners can return to assignment instructions and feedback in their own time, at their own pace"
+    ],
+    "inclusive_practice": [
+      "Consistent assignment structure means every learner knows what to expect and where to find it",
+      "Digital submission gives a learner more than one route to submit work if writing by hand is a barrier"
+    ]
+  },
+  "framework_alignment": [
+    "Digital Skills Framework: assignments and feedback",
+    "WCAG: text alternatives"
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": []
+}
