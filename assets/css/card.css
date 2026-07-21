@@ -1,6 +1,9 @@
 /* ==========================================================================
    The Learning Studio — Digital Practice Card
-   20/07/26 v1
+   21/07/26 v2 — Session 10 adds .practice-card__tag--linked hover/focus
+   states for tags that resolve to a resource (see render-card.js).
+   No new colours introduced — reuses --color-action, already used for
+   .main-nav a:hover.
 
    Depends on assets/css/tokens.css and assets/css/base.css being loaded
    first. Reuses the existing four colour tokens and the spacing scale
@@ -78,6 +81,19 @@
   border: 2px solid var(--color-ink);
   border-radius: 0.25rem;
   font-size: 0.875rem;
+  text-decoration: none;
+}
+
+/* ----- Session 10: linked tags (digital_practice_resources match) —
+   same base look as a plain tag, with a hover/focus state borrowed
+   from .main-nav a so a linked tag reads as interactive. Unmapped
+   tags are untouched plain <span> elements, per render-card.js. ----- */
+
+.practice-card__tag--linked:hover,
+.practice-card__tag--linked:focus-visible {
+  background-color: var(--color-action);
+  color: var(--color-white);
+  border-color: var(--color-action);
 }
 
 .practice-card__meta {
@@ -143,6 +159,13 @@ body.theme-dark .practice-card__meta {
   border-top-color: var(--color-ink);
 }
 
+body.theme-dark .practice-card__tag--linked:hover,
+body.theme-dark .practice-card__tag--linked:focus-visible {
+  background-color: var(--color-action);
+  color: var(--color-white);
+  border-color: var(--color-action);
+}
+
 /* ----- High contrast theme — Session 9: true black/yellow ----- */
 
 body.theme-high-contrast .practice-card {
@@ -170,4 +193,11 @@ body.theme-high-contrast .practice-card__status {
 
 body.theme-high-contrast .practice-card__meta {
   border-top-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .practice-card__tag--linked:hover,
+body.theme-high-contrast .practice-card__tag--linked:focus-visible {
+  background-color: var(--color-hc-text);
+  color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
 }
