@@ -1,0 +1,16 @@
+{
+  "id": "visualiser",
+  "version": "21/07/26 v1",
+  "title": "Using a visualiser to show your screen or workspace",
+  "what_it_is": "A visualiser is a camera device that projects whatever is placed underneath it — paper, a whiteboard, an object — onto a screen in real time.",
+  "why_use_it": "It lets you show live working, such as handwriting, diagrams or physical materials, to a whole room or a screen-share without writing everything onto a shared digital surface first. It works with material you already use, so nothing separate has to be prepared in advance.",
+  "how_to": [
+    "Connect the visualiser to your teaching station via USB or HDMI, depending on the model.",
+    "Select the visualiser as the video source in your display or meeting software.",
+    "Place what you want to show underneath the camera and adjust focus or zoom as needed.",
+    "If recording for later reuse, start your screen recording tool before you begin."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft"
+}
