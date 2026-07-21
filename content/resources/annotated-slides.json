@@ -1,0 +1,16 @@
+{
+  "id": "annotated-slides",
+  "version": "21/07/26 v1",
+  "title": "Annotating slides to capture working alongside content",
+  "what_it_is": "Annotated slides are presentation slides marked up live, with ink, shapes or text, during a session, then kept as a record of what was added.",
+  "why_use_it": "It combines prepared content with live working in one place, so learners see both the finished material and how it was built up. The annotated version can be saved and shared afterwards as a standalone resource.",
+  "how_to": [
+    "Open your slides in presenter or annotation mode, for example PowerPoint's Ink tools.",
+    "Choose a pen, highlighter or shape tool from the Draw tab.",
+    "Annotate directly on the slide as you talk through it.",
+    "Save a copy of the annotated slides and share it separately from the original deck."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft"
+}
