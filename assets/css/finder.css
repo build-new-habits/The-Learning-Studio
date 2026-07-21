@@ -1,0 +1,66 @@
+/* ==========================================================================
+   The Learning Studio — Finder
+   21/07/26 v1
+
+   Depends on assets/css/tokens.css and assets/css/base.css being loaded
+   first. Reuses the existing four colour tokens and the spacing scale
+   already established in base.css and card.css (0.25rem / 0.5rem /
+   0.75rem / 1rem / 1.5rem / 2rem). No new colour, font or spacing values
+   are introduced. Option styling mirrors .main-nav a in base.css.
+   ========================================================================== */
+
+.finder-intro {
+  margin: 0 0 1.5rem;
+  max-width: var(--line-length-max);
+}
+
+.finder-heading {
+  margin: 0 0 0.5rem;
+  color: var(--color-ink);
+}
+
+.finder-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  max-width: var(--line-length-max);
+}
+
+.finder-option {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--color-ink);
+  border-radius: 0.25rem;
+}
+
+.finder-option:hover {
+  background-color: var(--color-action);
+  color: var(--color-white);
+  border-color: var(--color-action);
+}
+
+/* ----- High contrast theme — uses only the existing token pair ----- */
+
+body.theme-high-contrast .finder-heading {
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .finder-option {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-high-contrast .finder-option:hover {
+  background-color: var(--color-action);
+  border-color: var(--color-action);
+}
