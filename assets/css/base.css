@@ -1,10 +1,9 @@
 /* ==========================================================================
    The Learning Studio — Base Styles
-   21/07/26 v2 — Session 7: body text now driven by user-controllable
-   CSS variables (size/line-height/letter-spacing) instead of fixed
-   values; old 3-button a11y-controls / text-size-step rules removed
-   and replaced by assets/css/settings.css. body.theme-high-contrast
-   and body.motion-reduced are UNCHANGED and reused by the new panel.
+   21/07/26 v3 — Session 9: body.theme-high-contrast is no longer the
+   same treatment as Dark. The original ink/white pairing now lives at
+   body.theme-dark (unchanged in appearance); body.theme-high-contrast
+   is a new true black/yellow theme. body.motion-reduced is unchanged.
 
    Depends on assets/css/tokens.css being loaded first.
    ========================================================================== */
@@ -216,46 +215,94 @@ button:focus {
   background-color: var(--color-surface);
 }
 
-/* ----- High contrast theme — inverted, using only the four tokens above ----- */
+/* ----- Dark theme — inverted, using only the four tokens above.
+   Session 9: this is the unchanged ink/white treatment that Dark and
+   High contrast previously shared under body.theme-high-contrast —
+   moved to its own class so Dark stays exactly as it looked before. ----- */
 
-body.theme-high-contrast {
+body.theme-dark {
   background-color: var(--color-ink);
   color: var(--color-white);
 }
 
-body.theme-high-contrast .site-header {
+body.theme-dark .site-header {
   background-color: var(--color-ink);
   border-bottom-color: var(--color-action);
 }
 
-body.theme-high-contrast .site-title,
-body.theme-high-contrast .strapline {
+body.theme-dark .site-title,
+body.theme-dark .strapline {
   color: var(--color-white);
 }
 
-body.theme-high-contrast .main-nav a {
+body.theme-dark .main-nav a {
   background-color: var(--color-white);
   color: var(--color-ink);
   border-color: var(--color-white);
 }
 
-body.theme-high-contrast .main-nav a:hover {
+body.theme-dark .main-nav a:hover {
   background-color: var(--color-action);
   color: var(--color-white);
   border-color: var(--color-action);
 }
 
-body.theme-high-contrast #settings-trigger {
+body.theme-dark #settings-trigger {
   background-color: var(--color-ink);
   color: var(--color-white);
   border-color: var(--color-white);
+}
+
+body.theme-dark a:focus-visible,
+body.theme-dark button:focus-visible,
+body.theme-dark a:focus,
+body.theme-dark button:focus {
+  outline-color: var(--color-white);
+}
+
+/* ----- High contrast theme — Session 9: true black/yellow, matching
+   the Windows High Contrast Black convention. Interactive elements
+   (buttons, links, focus outlines) keep a clear yellow border/outline
+   throughout, per the Windows convention. ----- */
+
+body.theme-high-contrast {
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .site-header {
+  background-color: var(--color-hc-background);
+  border-bottom-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .site-title,
+body.theme-high-contrast .strapline {
+  color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .main-nav a {
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .main-nav a:hover {
+  background-color: var(--color-hc-text);
+  color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast #settings-trigger {
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast a:focus-visible,
 body.theme-high-contrast button:focus-visible,
 body.theme-high-contrast a:focus,
 body.theme-high-contrast button:focus {
-  outline-color: var(--color-white);
+  outline-color: var(--color-hc-text);
 }
 
 /* ----- Motion ----- */
