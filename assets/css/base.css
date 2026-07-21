@@ -334,3 +334,12 @@ body.motion-reduced *::after {
   animation: none !important;
   scroll-behavior: auto !important;
 }
+
+/* ----- Underline all links (Settings panel toggle) ----- */
+
+body.underline-links .main-nav a,
+body.underline-links .finder-option,
+body.underline-links .immersive-reader-link,
+body.underline-links .practice-card__tag--linked {
+  text-decoration: underline;
+}
