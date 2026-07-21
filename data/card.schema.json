@@ -12,6 +12,10 @@
     "pyramid_layers": { "type": "array", "items": { "type": "string" } },
     "tech_routes": { "type": "array", "items": { "type": "string" } },
     "digital_practices": { "type": "array", "items": { "type": "string" } },
+    "digital_practice_resources": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
     "learning_lenses": {
       "type": "object",
       "properties": {
