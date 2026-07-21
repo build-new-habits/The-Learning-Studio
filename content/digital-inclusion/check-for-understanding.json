@@ -1,0 +1,42 @@
+{
+  "id": "check-for-understanding",
+  "version": "21/07/26 v1",
+  "title": "Run a quick digital check for understanding",
+  "staff_situations": ["How do I run a quick digital check for understanding?"],
+  "underlying_needs": [
+    "A fast way to capture learner responses in the moment",
+    "A low-friction digital tool that doesn't disrupt the pace of a lesson",
+    "A record of understanding that can inform what happens next"
+  ],
+  "pyramid_layers": ["Digital Inclusion"],
+  "tech_routes": ["low-tech", "digital"],
+  "digital_practices": [
+    "mini whiteboards",
+    "Plickers",
+    "Forms",
+    "polls",
+    "exit ticket",
+    "photo or voice evidence"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Forms and polls can be completed using assistive technology",
+      "Photo or voice evidence gives a learner an alternative to writing under time pressure"
+    ],
+    "inclusive_practice": [
+      "Every learner responds, not only the one called on to answer aloud",
+      "Anonymous or low-visibility formats mean no learner is identified by an incorrect answer"
+    ],
+    "trauma_informed": [
+      "Avoids putting an individual learner on the spot in front of peers to demonstrate understanding"
+    ]
+  },
+  "framework_alignment": [
+    "QFT: checking understanding",
+    "Digital Skills Framework: digital assessment for learning tools"
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": []
+}
