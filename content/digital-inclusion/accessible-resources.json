@@ -1,0 +1,40 @@
+{
+  "id": "accessible-resources",
+  "version": "21/07/26 v1",
+  "title": "Make resources accessible with digital tools",
+  "staff_situations": ["How do I make resources accessible?"],
+  "underlying_needs": [
+    "Structuring documents and slides so assistive technology can read them correctly",
+    "Building accessibility into a resource from the start rather than retrofitting it afterwards",
+    "Meeting WCAG requirements without needing to become an accessibility specialist"
+  ],
+  "pyramid_layers": ["Digital Inclusion"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "headings",
+    "alt text",
+    "captions",
+    "colour contrast",
+    "Accessibility Checker",
+    "accessible templates"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Correct heading structure lets screen reader users navigate a document",
+      "Alt text and captions give equivalent access to non-text content",
+      "Colour contrast checked against WCAG thresholds with a real tool, not eyeballed"
+    ],
+    "inclusive_practice": [
+      "Benefits every learner using the resource, not only those who have disclosed a need",
+      "Removes the need for a bespoke, one-off adapted version made for a single learner"
+    ]
+  },
+  "framework_alignment": [
+    "WCAG: perceivable and operable content",
+    "Digital Skills Framework: accessible document creation"
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": ["reading-writing-support"]
+}
