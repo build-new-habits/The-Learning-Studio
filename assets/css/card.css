@@ -112,31 +112,62 @@
   font-weight: 700;
 }
 
-/* ----- High contrast theme — uses only the existing token pair ----- */
+/* ----- Dark theme — uses only the existing token pair. Session 9:
+   this is the unchanged block that Dark and High contrast previously
+   shared, moved to its own class. ----- */
 
-body.theme-high-contrast .practice-card {
+body.theme-dark .practice-card {
   background-color: var(--color-ink);
   border-color: var(--color-white);
+}
+
+body.theme-dark .practice-card__title,
+body.theme-dark .practice-card__heading,
+body.theme-dark .practice-card__meta dt,
+body.theme-dark .practice-card__meta dd {
+  color: var(--color-white);
+}
+
+body.theme-dark .practice-card__eyebrow {
+  color: var(--color-white);
+}
+
+body.theme-dark .practice-card__tag,
+body.theme-dark .practice-card__status {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-dark .practice-card__meta {
+  border-top-color: var(--color-ink);
+}
+
+/* ----- High contrast theme — Session 9: true black/yellow ----- */
+
+body.theme-high-contrast .practice-card {
+  background-color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .practice-card__title,
 body.theme-high-contrast .practice-card__heading,
 body.theme-high-contrast .practice-card__meta dt,
 body.theme-high-contrast .practice-card__meta dd {
-  color: var(--color-white);
+  color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .practice-card__eyebrow {
-  color: var(--color-white);
+  color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .practice-card__tag,
 body.theme-high-contrast .practice-card__status {
-  background-color: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .practice-card__meta {
-  border-top-color: var(--color-ink);
+  border-top-color: var(--color-hc-text);
 }
