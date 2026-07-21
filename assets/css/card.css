@@ -1,0 +1,142 @@
+/* ==========================================================================
+   The Learning Studio — Digital Practice Card
+   20/07/26 v1
+
+   Depends on assets/css/tokens.css and assets/css/base.css being loaded
+   first. Reuses the existing four colour tokens and the spacing scale
+   already established in base.css (0.25rem / 0.5rem / 0.75rem / 1rem /
+   1.5rem / 2rem). No new colour, font or spacing values are introduced.
+   ========================================================================== */
+
+.practice-card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-surface);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  margin: 0 0 2rem;
+  max-width: var(--line-length-max);
+}
+
+.practice-card__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-action);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.practice-card__title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--color-ink);
+}
+
+.practice-card__section {
+  margin: 0 0 1.5rem;
+}
+
+.practice-card__section:last-child {
+  margin-bottom: 0;
+}
+
+.practice-card__heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  color: var(--color-ink);
+}
+
+.practice-card__list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.practice-card__list li {
+  margin-bottom: 0.5rem;
+}
+
+.practice-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+.practice-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.practice-card__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.practice-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-white);
+  font-size: 0.875rem;
+}
+
+.practice-card__meta dt {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.practice-card__meta dd {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.practice-card__status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* ----- High contrast theme — uses only the existing token pair ----- */
+
+body.theme-high-contrast .practice-card {
+  background-color: var(--color-ink);
+  border-color: var(--color-white);
+}
+
+body.theme-high-contrast .practice-card__title,
+body.theme-high-contrast .practice-card__heading,
+body.theme-high-contrast .practice-card__meta dt,
+body.theme-high-contrast .practice-card__meta dd {
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .practice-card__eyebrow {
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .practice-card__tag,
+body.theme-high-contrast .practice-card__status {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-high-contrast .practice-card__meta {
+  border-top-color: var(--color-ink);
+}
