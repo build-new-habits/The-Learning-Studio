@@ -1,0 +1,39 @@
+* content/digital-foundations/organise-posts-and-files.json (21/07/26 v1)
+*
+{
+  "id": "organise-posts-and-files",
+  "version": "21/07/26 v1",
+  "title": "Organise posts and files so learners can find things",
+  "staff_situations": ["How do I organise posts and files so learners can find things?"],
+  "underlying_needs": [
+    "A consistent, predictable structure so learners spend less time searching and more time working",
+    "A visual pattern learners can recognise at a glance, alongside clear text labels",
+    "The same resource can sit in more than one place if permissions and findability both stay correct — this is not duplication for its own sake, it's making sure a learner can find what they need from wherever they're looking"
+  ],
+  "pyramid_layers": ["Digital Foundations"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "colour-coding by day, session or recurring topic",
+    "consistent folder and file naming",
+    "pinned posts for key resources",
+    "channel structure by topic or unit"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Colour-coding is paired with clear text labels so meaning never depends on colour alone",
+      "Consistent, predictable structure reduces navigation effort for learners using a screen reader or switch access"
+    ],
+    "inclusive_practice": [
+      "A well-organised, colour-coded space benefits every learner, not only those who ask where to find something",
+      "Reduces how often staff need to repeat the same navigation instructions to individual learners"
+    ]
+  },
+  "framework_alignment": [
+    "Digital Skills Framework: content organisation",
+    "WCAG: use of colour"
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": ["team-space-setup"]
+}
