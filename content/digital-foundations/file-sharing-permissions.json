@@ -1,0 +1,40 @@
+* content/digital-foundations/file-sharing-permissions.json (21/07/26 v1)
+*
+{
+  "id": "file-sharing-permissions",
+  "version": "21/07/26 v1",
+  "title": "Keep files and sharing permissions in good order",
+  "staff_situations": ["How do I keep files and sharing permissions in good order?"],
+  "underlying_needs": [
+    "Knowing who can see, edit and share a file, and checking this is set correctly before it's shared",
+    "Editable access to another learner's personal or 1:1 records must never happen — this is a practice rule, stated plainly, not a judgement call to make case by case",
+    "Reviewing and removing access when it's no longer needed"
+  ],
+  "pyramid_layers": ["Digital Foundations"],
+  "tech_routes": ["digital"],
+  "digital_practices": [
+    "permission checks before sharing",
+    "view vs edit access",
+    "removing outdated access",
+    "keeping 1:1 and personal records separate from shared group spaces"
+  ],
+  "learning_lenses": {
+    "accessibility": [
+      "Correctly scoped permissions mean a learner using assistive technology only encounters files intended for them, rather than a cluttered or confusing space"
+    ],
+    "inclusive_practice": [
+      "Protects every learner's personal and 1:1 records equally — this is not optional or dependent on who is asking",
+      "Clear permission structure prevents a learner from accidentally being given access to another learner's information"
+    ],
+    "trauma_informed": [
+      "Avoids the distress of a learner discovering their personal or 1:1 records were visible to someone they shouldn't have been"
+    ]
+  },
+  "framework_alignment": [
+    "Digital Skills Framework: file and permission management"
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "21/07/26",
+  "review_status": "Draft",
+  "related_cards": []
+}
