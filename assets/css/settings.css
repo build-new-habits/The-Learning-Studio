@@ -277,43 +277,82 @@
   flex-shrink: 0;
 }
 
-/* ----- High contrast / Dark scheme — reuses the existing
-   body.theme-high-contrast pairing already built in base.css ----- */
+/* ----- Dark scheme — Session 9: unchanged ink/white pairing, moved
+   to its own body.theme-dark class (previously shared with High
+   contrast under body.theme-high-contrast) ----- */
 
-body.theme-high-contrast .sett-panel {
+body.theme-dark .sett-panel {
   background: var(--color-ink);
   border-left-color: var(--color-white);
+}
+
+body.theme-dark .sett-title,
+body.theme-dark .sg-label,
+body.theme-dark .rval,
+body.theme-dark .srow label {
+  color: var(--color-white);
+}
+
+body.theme-dark .sdesc {
+  color: var(--color-white);
+}
+
+body.theme-dark .sett-close,
+body.theme-dark .bchoice,
+body.theme-dark .sett-reset {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-dark .bchoice[aria-pressed="true"] {
+  background: var(--color-action);
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+body.theme-dark .immersive-reader-link {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* ----- High contrast scheme — Session 9: true black/yellow ----- */
+
+body.theme-high-contrast .sett-panel {
+  background: var(--color-hc-background);
+  border-left-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .sett-title,
 body.theme-high-contrast .sg-label,
 body.theme-high-contrast .rval,
 body.theme-high-contrast .srow label {
-  color: var(--color-white);
+  color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .sdesc {
-  color: var(--color-white);
+  color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .sett-close,
 body.theme-high-contrast .bchoice,
 body.theme-high-contrast .sett-reset {
-  background: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
+  background: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .bchoice[aria-pressed="true"] {
-  background: var(--color-action);
-  border-color: var(--color-white);
-  color: var(--color-white);
+  background: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+  color: var(--color-hc-background);
 }
 
 body.theme-high-contrast .immersive-reader-link {
-  background: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
+  background: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
 }
 
 /* ----- Warm scheme — panel and Immersive Reader link pick up the
