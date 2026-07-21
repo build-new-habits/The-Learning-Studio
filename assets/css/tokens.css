@@ -1,7 +1,8 @@
 /* ==========================================================================
    The Learning Studio — Design Tokens
-   21/07/26 v2 — Session 7 adds the Settings Panel token block below.
-   Original four colours and base tokens are unchanged.
+   21/07/26 v3 — Session 9 adds the true black/yellow High Contrast
+   token block below. Original four colours and base tokens are
+   unchanged.
    ========================================================================== */
 
 :root {
@@ -25,17 +26,15 @@
 
    Colour scheme note: the brief asked for Default / Warm / Dark / High
    contrast, derived from the four tokens above wherever possible.
-   - Default and Dark both reuse the existing ink/white pairing (already
-     built as body.theme-high-contrast in base.css/card.css/finder.css) —
-     verified 9.54:1, exceeds AAA. No new colour needed for either.
-   - Dark and High contrast are mapped to the SAME visual treatment
-     (body.theme-high-contrast) rather than inventing a second dark
-     variant. Our four-token palette only has one ink/white maximum-
-     contrast pairing — a true 21:1 black/white mode would need a new
-     colour with no basis in the palette, and the brief says not to
-     invent one without unavoidable need. Flagged for PM: confirm this
-     reuse is acceptable, or specify what should visually distinguish
-     the two if not.
+   - Default and Dark both use the existing ink/white pairing —
+     verified 9.54:1, exceeds AAA. No new colour needed for Dark.
+   - UPDATED Session 9: Dark and High contrast previously mapped to
+     the SAME visual treatment (body.theme-high-contrast) — see the
+     Session 9 block below, which gives High Contrast its own true
+     black/yellow theme (body.theme-high-contrast) and moves the
+     original ink/white pairing to its own body.theme-dark class,
+     unchanged in appearance. The two are now visually distinct, per
+     PM instruction.
    - Warm cannot be built from ink/action/surface/white — all four are
      cool-toned and combining them cannot produce a warm background.
      This is the one unavoidable 5th colour, named and justified here:
@@ -89,4 +88,33 @@
   --color-ink-muted: rgba(31, 75, 87, 0.75);
   --panel-active-tint: rgba(15, 122, 107, 0.12);
   --panel-overlay: rgba(0, 0, 0, 0.45); /* neutral modal scrim, not a brand colour */
+}
+
+/* ==========================================================================
+   SESSION 9 ADDITIONS — True Black/Yellow High Contrast
+   21/07/26 v3
+
+   High Contrast previously reused the same visual treatment as Dark
+   (see the Session 7 note above). This gives High Contrast its own
+   true black/yellow theme, matching the Windows High Contrast Black
+   convention, while Dark keeps the original ink/white pairing
+   unchanged under its own class (body.theme-dark).
+
+   --color-hc-background / --color-hc-text: not derived from the four
+   core tokens — same "unavoidable extra colour" situation as
+   --color-warm-surface above, since a true black/yellow pairing has
+   no basis in the ink/action/surface/white palette.
+
+   Contrast verified by calculation (WCAG relative luminance formula,
+   not eyeballed — computed independently, not copied from the brief):
+     relative luminance, #000000 = 0
+     relative luminance, #FFFF00 = 0.2126(1) + 0.7152(1) + 0.0722(0)
+       = 0.9278
+     contrast ratio = (0.9278 + 0.05) / (0 + 0.05) = 19.56:1
+   Exceeds AAA (7:1) by a wide margin.
+   ========================================================================== */
+
+:root {
+  --color-hc-background: #000000;
+  --color-hc-text: #FFFF00;
 }
