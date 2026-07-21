@@ -1,6 +1,9 @@
 /* ==========================================================================
    The Learning Studio — Digital Practice Card renderer
-   20/07/26 v1
+   21/07/26 v2 — Session 10: digital_practices tags now render as a link
+   to /content/resources/<id>.html when a matching entry exists in the
+   card's optional digital_practice_resources map. Tags with no match
+   degrade to the original plain-tag rendering, unchanged.
 
    Fetches a single card JSON file (validated against data/card.schema.json)
    and renders it into the container carrying [data-card-src]. Renders only
@@ -43,11 +46,19 @@
     return ul;
   }
 
-  function tagList(items) {
+  function tagList(items, resourceMap) {
     var ul = el('ul', { class: 'practice-card__tags' });
     items.forEach(function (item) {
       var li = el('li');
-      li.appendChild(text('span', { class: 'practice-card__tag' }, item));
+      var resourceId = resourceMap ? resourceMap[item] : null;
+      if (resourceId) {
+        li.appendChild(text('a', {
+          class: 'practice-card__tag practice-card__tag--linked',
+          href: '../resources/' + resourceId + '.html'
+        }, item));
+      } else {
+        li.appendChild(text('span', { class: 'practice-card__tag' }, item));
+      }
       ul.appendChild(li);
     });
     return ul;
@@ -95,7 +106,7 @@
     }
 
     if (data.digital_practices && data.digital_practices.length) {
-      container.appendChild(section('Digital practices', tagList(data.digital_practices)));
+      container.appendChild(section('Digital practices', tagList(data.digital_practices, data.digital_practice_resources)));
     }
 
     if (data.learning_lenses) {
