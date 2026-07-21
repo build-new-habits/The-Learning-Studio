@@ -19,9 +19,11 @@
    data, no identifiers, no cookies, no network transmission. These
    eight string values are the only thing ever written to storage.
 
-   'dark' and 'high-contrast' scheme values both apply the same
-   body.theme-high-contrast class already built in base.css/card.css/
-   finder.css — see the tokens.css comment for why.
+   Session 9: 'dark' and 'high-contrast' scheme values previously
+   applied the same body.theme-high-contrast class. They now map to
+   separate classes — body.theme-dark (unchanged ink/white pairing)
+   and body.theme-high-contrast (new true black/yellow theme) — see
+   the tokens.css Session 9 comment for the contrast calculation.
    ========================================================================== */
 
 (function () {
@@ -52,7 +54,7 @@
   var SCHEME_CLASS = {
     default: '',
     warm: 'scheme-warm',
-    dark: 'theme-high-contrast',
+    dark: 'theme-dark',
     'high-contrast': 'theme-high-contrast'
   };
 
