@@ -17,6 +17,13 @@
     "annotated slides",
     "think-aloud video"
   ],
+  "digital_practice_resources": {
+    "visualiser": "visualiser",
+    "screen recording": "screen-recording",
+    "OneNote annotation": "onenote-annotation",
+    "annotated slides": "annotated-slides",
+    "think-aloud video": "think-aloud-video"
+  },
   "learning_lenses": {
     "accessibility": [
       "Screen recordings and think-aloud videos can carry captions and a transcript",
