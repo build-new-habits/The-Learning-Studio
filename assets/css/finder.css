@@ -48,19 +48,39 @@
   border-color: var(--color-action);
 }
 
-/* ----- High contrast theme — uses only the existing token pair ----- */
+/* ----- Dark theme — uses only the existing token pair. Session 9:
+   this is the unchanged block that Dark and High contrast previously
+   shared, moved to its own class. ----- */
 
-body.theme-high-contrast .finder-heading {
+body.theme-dark .finder-heading {
   color: var(--color-white);
 }
 
-body.theme-high-contrast .finder-option {
+body.theme-dark .finder-option {
   background-color: var(--color-ink);
   color: var(--color-white);
   border-color: var(--color-white);
 }
 
-body.theme-high-contrast .finder-option:hover {
+body.theme-dark .finder-option:hover {
   background-color: var(--color-action);
   border-color: var(--color-action);
+}
+
+/* ----- High contrast theme — Session 9: true black/yellow ----- */
+
+body.theme-high-contrast .finder-heading {
+  color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .finder-option {
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .finder-option:hover {
+  background-color: var(--color-hc-text);
+  color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
 }
