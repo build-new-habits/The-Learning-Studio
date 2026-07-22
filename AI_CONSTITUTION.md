@@ -12,4 +12,5 @@
 * All colour/contrast choices must be tested with a real tool, not eyeballed
 * Every session ends with a handoff: files changed, reason, tests run, assumptions, unresolved risks, next action
 
-*Evidence Standard. Any claim that something was tested, validated, or verified must be accompanied by the raw, unedited output of that test — command run, full output pasted, nothing summarised or narrated. A description of expected behaviour is not evidence and must not be presented as though it were. If something wasn't actually run, say so explicitly rather than describing what running it would show.
+* Evidence Standard. Any claim that something was tested, validated, or verified must be accompanied by the raw, unedited output of that test — command run, full output pasted, nothing summarised or narrated. A description of expected behaviour is not evidence and must not be presented as though it were. If something wasn't actually run, say so explicitly rather than describing what running it would show.
+* Read CONTENT_STYLE.md before writing or editing any card or resource content
