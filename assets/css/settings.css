@@ -220,13 +220,50 @@
   border-radius: 100px;
 }
 
-/* ----- Deferred controls note (Read aloud voice / Reading speed —
-   explicitly out of scope this session per the brief) ----- */
+/* ----- Read aloud (Session 11) — real browser-native text-to-speech.
+   #read-aloud-group ships with the `hidden` attribute in every page's
+   HTML by default; assets/js/readaloud.js only ever removes it, and
+   only once it has confirmed window.speechSynthesis support. If that
+   script fails to load, or the browser has no speech support, the
+   group simply never appears — see readaloud.js for the full note. ----- */
 
-.sett-deferred-note {
-  font-size: 0.8125rem;
-  color: var(--color-ink-muted);
-  font-style: italic;
+.ra-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: var(--touch-target-min);
+  margin: 0.6rem 0 0.9rem;
+  padding: 0.6rem 1rem;
+  background: var(--color-white);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ra-toggle:hover {
+  background: var(--color-surface);
+}
+
+.ra-toggle[aria-pressed="true"] {
+  background: var(--panel-active-tint);
+  border-color: var(--color-action);
+}
+
+.ra-icon {
+  flex-shrink: 0;
+}
+
+.ra-speed-row {
+  margin-top: 0.25rem;
+}
+
+.ra-speed-row .sg-label {
+  margin-bottom: 0.5rem;
 }
 
 /* ----- Reset button ----- */
@@ -317,6 +354,18 @@ body.theme-dark .immersive-reader-link {
   border-color: var(--color-white);
 }
 
+body.theme-dark .ra-toggle {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+body.theme-dark .ra-toggle[aria-pressed="true"] {
+  background: var(--color-action);
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
 /* ----- High contrast scheme — Session 9: true black/yellow ----- */
 
 body.theme-high-contrast .sett-panel {
@@ -353,6 +402,18 @@ body.theme-high-contrast .immersive-reader-link {
   background: var(--color-hc-background);
   color: var(--color-hc-text);
   border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .ra-toggle {
+  background: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .ra-toggle[aria-pressed="true"] {
+  background: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+  color: var(--color-hc-background);
 }
 
 /* ----- Warm scheme — panel and Immersive Reader link pick up the
