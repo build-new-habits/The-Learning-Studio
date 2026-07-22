@@ -2,427 +2,405 @@
    The Learning Studio — Settings Panel
    21/07/26 v1
 
-   Depends on assets/css/tokens.css and assets/css/base.css being loaded
-   first. Structure follows the reference pattern supplied for this
-   session; every colour below is one of the four core tokens, an
-   alpha-derived value of one of them (see tokens.css for the contrast
-   maths behind each), or the one named/justified exception
-   (--color-warm-surface). No other new colours are introduced.
+   Replaces the Session 2 3-button accessibility row (assets/js/
+   accessibility.js — now unreferenced, left in the repo rather than
+   deleted). Eight independent preferences, stored in localStorage ONLY:
 
-   Touch targets: several controls in the original reference pattern
-   (pill buttons, close button) were sized smaller than 44x44px. They
-   are deliberately enlarged here to meet --touch-target-min — a
-   departure from the reference's visual density, made for WCAG 2.2 AA
-   compliance (Blueprint Section 9: "Accessibility ... non-negotiable").
-   Native range slider thumbs are left at browser-default size; only
-   accent-color is set. Per WCAG 2.5.8, control size set by the user
-   agent and unmodified by the author is exempt from the 44px minimum.
+     tls-scheme          : 'default' | 'warm' | 'dark' | 'high-contrast'
+     tls-font             : 'default' | 'dyslexia' | 'serif' | 'mono'
+     tls-text-size        : '14'..'24' (px, string)
+     tls-line-spacing     : '1.2'..'2.2' (string)
+     tls-letter-spacing   : '0'..'0.12' (em, string)
+     tls-reduced-motion   : 'on' | 'off'
+     tls-enhanced-focus   : 'on' | 'off'
+     tls-underline-links  : 'on' | 'off'
+
+   Hard constraint carried over unchanged from Session 2: no personal
+   data, no identifiers, no cookies, no network transmission. These
+   eight string values are the only thing ever written to storage.
+
+   Session 9: 'dark' and 'high-contrast' scheme values previously
+   applied the same body.theme-high-contrast class. They now map to
+   separate classes — body.theme-dark (unchanged ink/white pairing)
+   and body.theme-high-contrast (new true black/yellow theme) — see
+   the tokens.css Session 9 comment for the contrast calculation.
    ========================================================================== */
 
-/* ----- Overlay + panel ----- */
-
-.sett-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: var(--panel-overlay);
-  z-index: 200;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.sett-overlay.open {
-  display: flex;
-}
-
-.sett-panel {
-  background: var(--color-white);
-  width: min(400px, 100vw);
-  height: 100vh;
-  overflow-y: auto;
-  padding: 1.5rem;
-  border-left: 2px solid var(--color-surface);
-  position: relative;
-}
-
-.sett-title {
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--color-ink);
-  margin: 0 0 0.25rem;
-}
-
-.sett-close {
-  position: absolute;
-  top: 0.9rem;
-  right: 1rem;
-  min-height: var(--touch-target-min);
-  min-width: var(--touch-target-min);
-  background: none;
-  border: 2px solid var(--panel-border-strong);
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  color: var(--color-ink);
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-}
-
-.sett-close:hover {
-  background: var(--color-surface);
-}
-
-/* ----- Section groups ----- */
-
-.sg {
-  margin-bottom: 1.25rem;
-  border-top: 1px solid var(--panel-border);
-  padding-top: 0.9rem;
-}
-
-.sg-label {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-ink);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.sdesc {
-  font-size: 0.8125rem;
-  color: var(--color-ink-muted);
-  margin: 0.3rem 0 0;
-  line-height: 1.5;
-}
-
-/* ----- Pill button group (colour scheme / font) ----- */
-
-.btn-grp {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.bchoice {
-  min-height: var(--touch-target-min);
-  background: var(--color-white);
-  border: 2px solid var(--panel-border-strong);
-  border-radius: 100px;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--color-ink);
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.bchoice:hover {
-  border-color: var(--color-action);
-}
-
-.bchoice[aria-pressed="true"] {
-  background: var(--panel-active-tint);
-  border-color: var(--color-action);
-  color: var(--color-ink);
-  font-weight: 700;
-}
-
-/* ----- Sliders (text size / line spacing / letter spacing) ----- */
-
-.range-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.range-row input[type="range"] {
-  flex: 1;
-  accent-color: var(--color-action);
-  min-height: var(--touch-target-min); /* generous hit area around the native thumb */
-}
-
-.rval {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--color-ink);
-  min-width: 3.2rem;
-  text-align: right;
-}
-
-/* ----- Toggle rows (motion / focus / underline) ----- */
-
-.srow {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  min-height: var(--touch-target-min);
-  margin-bottom: 0.35rem;
-}
-
-.srow label {
-  font-size: 0.9375rem;
-  color: var(--color-ink);
-  flex: 1;
-}
-
-.toggle {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-.toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.tslider {
-  position: absolute;
-  inset: 0;
-  background: var(--panel-border-strong);
-  border-radius: 100px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.tslider::before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 3px;
-  top: 3px;
-  background: var(--color-white);
-  border-radius: 50%;
-  transition: transform 0.2s ease;
-}
-
-.toggle input:checked + .tslider {
-  background: var(--color-action);
-}
-
-.toggle input:checked + .tslider::before {
-  transform: translateX(20px);
-}
-
-.toggle input:focus-visible + .tslider {
-  outline: 3px solid var(--color-ink);
-  outline-offset: 2px;
-  border-radius: 100px;
-}
-
-/* ----- Read aloud (Session 11) — real browser-native text-to-speech.
-   #read-aloud-group ships with the `hidden` attribute in every page's
-   HTML by default; assets/js/readaloud.js only ever removes it, and
-   only once it has confirmed window.speechSynthesis support. If that
-   script fails to load, or the browser has no speech support, the
-   group simply never appears — see readaloud.js for the full note. ----- */
-
-.ra-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  min-height: var(--touch-target-min);
-  margin: 0.6rem 0 0.9rem;
-  padding: 0.6rem 1rem;
-  background: var(--color-white);
-  color: var(--color-ink);
-  border: 2px solid var(--color-ink);
-  border-radius: 0.25rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.ra-toggle:hover {
-  background: var(--color-surface);
-}
-
-.ra-toggle[aria-pressed="true"] {
-  background: var(--panel-active-tint);
-  border-color: var(--color-action);
-}
-
-.ra-icon {
-  flex-shrink: 0;
-}
-
-.ra-speed-row {
-  margin-top: 0.25rem;
-}
-
-.ra-speed-row .sg-label {
-  margin-bottom: 0.5rem;
-}
-
-/* ----- Reset button ----- */
-
-.sett-reset {
-  width: 100%;
-  min-height: var(--touch-target-min);
-  margin-top: 0.5rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-white);
-  color: var(--color-ink);
-  border: 2px solid var(--color-ink);
-  border-radius: 0.25rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.sett-reset:hover {
-  background: var(--color-surface);
-}
-
-/* ----- Immersive Reader link (card pages only) ----- */
-
-.immersive-reader-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: var(--touch-target-min);
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--color-white);
-  color: var(--color-ink);
-  border: 2px solid var(--color-ink);
-  border-radius: 0.25rem;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.875rem;
-}
-
-.immersive-reader-link:hover {
-  border-color: var(--color-action);
-  color: var(--color-action);
-}
-
-.ir-icon {
-  flex-shrink: 0;
-}
-
-/* ----- Dark scheme — Session 9: unchanged ink/white pairing, moved
-   to its own body.theme-dark class (previously shared with High
-   contrast under body.theme-high-contrast) ----- */
-
-body.theme-dark .sett-panel {
-  background: var(--color-ink);
-  border-left-color: var(--color-white);
-}
-
-body.theme-dark .sett-title,
-body.theme-dark .sg-label,
-body.theme-dark .rval,
-body.theme-dark .srow label {
-  color: var(--color-white);
-}
-
-body.theme-dark .sdesc {
-  color: var(--color-white);
-}
-
-body.theme-dark .sett-close,
-body.theme-dark .bchoice,
-body.theme-dark .sett-reset {
-  background: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-body.theme-dark .bchoice[aria-pressed="true"] {
-  background: var(--color-action);
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
-body.theme-dark .immersive-reader-link {
-  background: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-body.theme-dark .ra-toggle {
-  background: var(--color-ink);
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-body.theme-dark .ra-toggle[aria-pressed="true"] {
-  background: var(--color-action);
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
-/* ----- High contrast scheme — Session 9: true black/yellow ----- */
-
-body.theme-high-contrast .sett-panel {
-  background: var(--color-hc-background);
-  border-left-color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .sett-title,
-body.theme-high-contrast .sg-label,
-body.theme-high-contrast .rval,
-body.theme-high-contrast .srow label {
-  color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .sdesc {
-  color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .sett-close,
-body.theme-high-contrast .bchoice,
-body.theme-high-contrast .sett-reset {
-  background: var(--color-hc-background);
-  color: var(--color-hc-text);
-  border-color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .bchoice[aria-pressed="true"] {
-  background: var(--color-hc-text);
-  border-color: var(--color-hc-text);
-  color: var(--color-hc-background);
-}
-
-body.theme-high-contrast .immersive-reader-link {
-  background: var(--color-hc-background);
-  color: var(--color-hc-text);
-  border-color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .ra-toggle {
-  background: var(--color-hc-background);
-  color: var(--color-hc-text);
-  border-color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .ra-toggle[aria-pressed="true"] {
-  background: var(--color-hc-text);
-  border-color: var(--color-hc-text);
-  color: var(--color-hc-background);
-}
-
-/* ----- Warm scheme — panel and Immersive Reader link pick up the
-   cream background; body-level rules for the rest live in base.css ----- */
-
-body.scheme-warm .sett-panel {
-  background: var(--color-warm-surface);
-}
-
-body.scheme-warm .immersive-reader-link {
-  background: var(--color-warm-surface);
-}
+(function () {
+  'use strict';
+
+  var KEYS = {
+    scheme: 'tls-scheme',
+    font: 'tls-font',
+    textSize: 'tls-text-size',
+    lineSpacing: 'tls-line-spacing',
+    letterSpacing: 'tls-letter-spacing',
+    motion: 'tls-reduced-motion',
+    focus: 'tls-enhanced-focus',
+    underline: 'tls-underline-links'
+  };
+
+  var DEFAULTS = {
+    scheme: 'default',
+    font: 'default',
+    textSize: '17',
+    lineSpacing: '1.75',
+    letterSpacing: '0',
+    motion: 'off',
+    focus: 'off',
+    underline: 'off'
+  };
+
+  var SCHEME_CLASS = {
+    default: '',
+    warm: 'scheme-warm',
+    dark: 'theme-dark',
+    'high-contrast': 'theme-high-contrast'
+  };
+
+  var FONT_CLASS = {
+    default: '',
+    dyslexia: 'font-dyslexia',
+    serif: 'font-serif',
+    mono: 'font-mono'
+  };
+
+  function safeGet(key, fallback) {
+    try {
+      var value = window.localStorage.getItem(key);
+      return value === null ? fallback : value;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  function safeSet(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch (e) {
+      /* localStorage unavailable — preference persists for this page view only */
+    }
+  }
+
+  function safeRemove(key) {
+    try {
+      window.localStorage.removeItem(key);
+    } catch (e) {
+      /* no-op */
+    }
+  }
+
+  function announce(message) {
+    var status = document.getElementById('settings-status');
+    if (status) {
+      status.textContent = message;
+    }
+  }
+
+  /* ----- Apply functions ----- */
+
+  function applyScheme(value, opts) {
+    Object.keys(SCHEME_CLASS).forEach(function (key) {
+      if (SCHEME_CLASS[key]) {
+        document.body.classList.remove(SCHEME_CLASS[key]);
+      }
+    });
+    if (SCHEME_CLASS[value]) {
+      document.body.classList.add(SCHEME_CLASS[value]);
+    }
+    document.querySelectorAll('[data-setting="scheme"]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-value') === value ? 'true' : 'false');
+    });
+    if (opts && opts.announce) {
+      announce('Colour scheme set to ' + value.replace('-', ' '));
+    }
+  }
+
+  function applyFont(value, opts) {
+    Object.keys(FONT_CLASS).forEach(function (key) {
+      if (FONT_CLASS[key]) {
+        document.body.classList.remove(FONT_CLASS[key]);
+      }
+    });
+    if (FONT_CLASS[value]) {
+      document.body.classList.add(FONT_CLASS[value]);
+    }
+    document.querySelectorAll('[data-setting="font"]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-value') === value ? 'true' : 'false');
+    });
+    if (opts && opts.announce) {
+      announce('Font set to ' + value);
+    }
+  }
+
+  function applyTextSize(value, opts) {
+    document.body.style.setProperty('--user-text-size', value + 'px');
+    var display = document.getElementById('text-size-value');
+    if (display) {
+      display.textContent = value + 'px';
+    }
+    var input = document.getElementById('text-size-range');
+    if (input && input.value !== value) {
+      input.value = value;
+    }
+    if (opts && opts.announce) {
+      announce('Text size set to ' + value + ' pixels');
+    }
+  }
+
+  function applyLineSpacing(value, opts) {
+    document.body.style.setProperty('--user-line-height', value);
+    var display = document.getElementById('line-spacing-value');
+    if (display) {
+      display.textContent = parseFloat(value).toFixed(2);
+    }
+    var input = document.getElementById('line-spacing-range');
+    if (input && input.value !== value) {
+      input.value = value;
+    }
+    if (opts && opts.announce) {
+      announce('Line spacing set to ' + parseFloat(value).toFixed(2));
+    }
+  }
+
+  function applyLetterSpacing(value, opts) {
+    document.body.style.setProperty('--user-letter-spacing', value + 'em');
+    var display = document.getElementById('letter-spacing-value');
+    if (display) {
+      display.textContent = parseFloat(value).toFixed(2) + 'em';
+    }
+    var input = document.getElementById('letter-spacing-range');
+    if (input && input.value !== value) {
+      input.value = value;
+    }
+    if (opts && opts.announce) {
+      announce('Letter spacing set to ' + parseFloat(value).toFixed(2) + ' em');
+    }
+  }
+
+  function applyMotion(state, opts) {
+    var isReduced = state === 'on';
+    document.body.classList.toggle('motion-reduced', isReduced);
+    var input = document.getElementById('toggle-motion');
+    if (input) {
+      input.checked = isReduced;
+    }
+    if (opts && opts.announce) {
+      announce(isReduced ? 'Reduce motion on' : 'Reduce motion off');
+    }
+  }
+
+  function applyFocus(state, opts) {
+    var isEnhanced = state === 'on';
+    document.body.classList.toggle('enhanced-focus', isEnhanced);
+    var input = document.getElementById('toggle-focus');
+    if (input) {
+      input.checked = isEnhanced;
+    }
+    if (opts && opts.announce) {
+      announce(isEnhanced ? 'Enhanced focus outlines on' : 'Enhanced focus outlines off');
+    }
+  }
+
+  function applyUnderline(state, opts) {
+    var isUnderlined = state === 'on';
+    document.body.classList.toggle('underline-links', isUnderlined);
+    var input = document.getElementById('toggle-underline');
+    if (input) {
+      input.checked = isUnderlined;
+    }
+    if (opts && opts.announce) {
+      announce(isUnderlined ? 'Underline all links on' : 'Underline all links off');
+    }
+  }
+
+  /* ----- Panel open/close ----- */
+
+  var lastFocusedElement = null;
+
+  function openPanel() {
+    var overlay = document.getElementById('settings-overlay');
+    var trigger = document.getElementById('settings-trigger');
+    if (!overlay) {
+      return;
+    }
+    lastFocusedElement = document.activeElement;
+    overlay.classList.add('open');
+    if (trigger) {
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+    var closeBtn = document.getElementById('settings-close');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+    document.addEventListener('keydown', handleKeydown);
+  }
+
+  function closePanel() {
+    var overlay = document.getElementById('settings-overlay');
+    var trigger = document.getElementById('settings-trigger');
+    if (!overlay) {
+      return;
+    }
+    overlay.classList.remove('open');
+    if (trigger) {
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    document.removeEventListener('keydown', handleKeydown);
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  function handleKeydown(e) {
+    if (e.key === 'Escape') {
+      closePanel();
+    }
+  }
+
+  /* ----- Reset ----- */
+
+  function resetAll() {
+    Object.keys(KEYS).forEach(function (name) {
+      safeRemove(KEYS[name]);
+    });
+    applyScheme(DEFAULTS.scheme, { announce: false });
+    applyFont(DEFAULTS.font, { announce: false });
+    applyTextSize(DEFAULTS.textSize, { announce: false });
+    applyLineSpacing(DEFAULTS.lineSpacing, { announce: false });
+    applyLetterSpacing(DEFAULTS.letterSpacing, { announce: false });
+    applyMotion(DEFAULTS.motion, { announce: false });
+    applyFocus(DEFAULTS.focus, { announce: false });
+    applyUnderline(DEFAULTS.underline, { announce: false });
+    announce('All settings reset to defaults');
+  }
+
+  /* ----- Init ----- */
+
+  function init() {
+    var scheme = safeGet(KEYS.scheme, DEFAULTS.scheme);
+    var font = safeGet(KEYS.font, DEFAULTS.font);
+    var textSize = safeGet(KEYS.textSize, DEFAULTS.textSize);
+    var lineSpacing = safeGet(KEYS.lineSpacing, DEFAULTS.lineSpacing);
+    var letterSpacing = safeGet(KEYS.letterSpacing, DEFAULTS.letterSpacing);
+    var motion = safeGet(KEYS.motion, DEFAULTS.motion);
+    var focus = safeGet(KEYS.focus, DEFAULTS.focus);
+    var underline = safeGet(KEYS.underline, DEFAULTS.underline);
+
+    applyScheme(scheme);
+    applyFont(font);
+    applyTextSize(textSize);
+    applyLineSpacing(lineSpacing);
+    applyLetterSpacing(letterSpacing);
+    applyMotion(motion);
+    applyFocus(focus);
+    applyUnderline(underline);
+
+    var trigger = document.getElementById('settings-trigger');
+    if (trigger) {
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.addEventListener('click', openPanel);
+    }
+
+    var closeBtn = document.getElementById('settings-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePanel);
+    }
+
+    var overlay = document.getElementById('settings-overlay');
+    if (overlay) {
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          closePanel();
+        }
+      });
+    }
+
+    document.querySelectorAll('[data-setting="scheme"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var value = btn.getAttribute('data-value');
+        safeSet(KEYS.scheme, value);
+        applyScheme(value, { announce: true });
+      });
+    });
+
+    document.querySelectorAll('[data-setting="font"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var value = btn.getAttribute('data-value');
+        safeSet(KEYS.font, value);
+        applyFont(value, { announce: true });
+      });
+    });
+
+    var textSizeInput = document.getElementById('text-size-range');
+    if (textSizeInput) {
+      textSizeInput.addEventListener('input', function () {
+        safeSet(KEYS.textSize, textSizeInput.value);
+        applyTextSize(textSizeInput.value, { announce: false });
+      });
+      textSizeInput.addEventListener('change', function () {
+        announce('Text size set to ' + textSizeInput.value + ' pixels');
+      });
+    }
+
+    var lineSpacingInput = document.getElementById('line-spacing-range');
+    if (lineSpacingInput) {
+      lineSpacingInput.addEventListener('input', function () {
+        safeSet(KEYS.lineSpacing, lineSpacingInput.value);
+        applyLineSpacing(lineSpacingInput.value, { announce: false });
+      });
+      lineSpacingInput.addEventListener('change', function () {
+        announce('Line spacing set to ' + parseFloat(lineSpacingInput.value).toFixed(2));
+      });
+    }
+
+    var letterSpacingInput = document.getElementById('letter-spacing-range');
+    if (letterSpacingInput) {
+      letterSpacingInput.addEventListener('input', function () {
+        safeSet(KEYS.letterSpacing, letterSpacingInput.value);
+        applyLetterSpacing(letterSpacingInput.value, { announce: false });
+      });
+      letterSpacingInput.addEventListener('change', function () {
+        announce('Letter spacing set to ' + parseFloat(letterSpacingInput.value).toFixed(2) + ' em');
+      });
+    }
+
+    var motionInput = document.getElementById('toggle-motion');
+    if (motionInput) {
+      motionInput.addEventListener('change', function () {
+        var value = motionInput.checked ? 'on' : 'off';
+        safeSet(KEYS.motion, value);
+        applyMotion(value, { announce: true });
+      });
+    }
+
+    var focusInput = document.getElementById('toggle-focus');
+    if (focusInput) {
+      focusInput.addEventListener('change', function () {
+        var value = focusInput.checked ? 'on' : 'off';
+        safeSet(KEYS.focus, value);
+        applyFocus(value, { announce: true });
+      });
+    }
+
+    var underlineInput = document.getElementById('toggle-underline');
+    if (underlineInput) {
+      underlineInput.addEventListener('change', function () {
+        var value = underlineInput.checked ? 'on' : 'off';
+        safeSet(KEYS.underline, value);
+        applyUnderline(value, { announce: true });
+      });
+    }
+
+    var resetBtn = document.getElementById('settings-reset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', resetAll);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
