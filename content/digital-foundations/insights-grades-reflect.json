@@ -4,9 +4,9 @@
   "title": "Use Insights, Grades and Reflect to check how learners are doing",
   "staff_situations": ["How do I use Insights, Grades and Reflect to check how learners are doing?"],
   "underlying_needs": [
-    "A digital way to see engagement, completion and grade patterns across a group, not only individual conversations",
-    "A low-friction way for learners to share how they're doing, without needing to say it out loud in front of peers",
-    "Early, aggregate signals that point to where a closer look or a check-in might help"
+    "Insights — a built-in Teams dashboard — shows patterns in engagement, completion and grades across a whole group, not just from individual conversations",
+    "Reflect — a private check-in tool built into Teams — lets learners share how they're doing without needing to say it out loud in front of peers",
+    "Early patterns that point to where a closer look, or a check-in with a learner, might help"
   ],
   "pyramid_layers": ["Digital Foundations"],
   "tech_routes": ["digital"],
@@ -18,14 +18,14 @@
   ],
   "learning_lenses": {
     "accessibility": [
-      "Reflect check-ins give a learner who finds speaking up difficult a private, low-pressure way to share how they're doing"
+      "Reflect check-ins let a learner who finds speaking up difficult share how they're doing privately and without pressure"
     ],
     "inclusive_practice": [
-      "Aggregate Insights data highlights patterns across the group rather than singling out one learner",
-      "Reflect gives every learner an equal, private channel to communicate, not only those confident enough to say it out loud"
+      "Insights shows patterns across the whole group, rather than singling out one learner",
+      "Reflect gives every learner an equal, private way to communicate, not just those confident enough to say it out loud"
     ],
     "trauma_informed": [
-      "Reflect avoids a learner needing to publicly disclose how they're feeling in front of peers"
+      "Reflect means a learner doesn't have to say how they're feeling in front of peers"
     ]
   },
   "framework_alignment": [
