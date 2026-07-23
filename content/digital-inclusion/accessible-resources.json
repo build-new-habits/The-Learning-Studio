@@ -18,6 +18,10 @@
     "Accessibility Checker",
     "accessible templates"
   ],
+  "digital_practice_resources": {
+    "captions": "captions",
+    "Accessibility Checker": "accessibility-checker"
+  },
   "learning_lenses": {
     "accessibility": [
       "Correct heading structure lets screen reader users navigate a document",
