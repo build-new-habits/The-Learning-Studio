@@ -1,0 +1,21 @@
+{
+  "id": "forms",
+  "version": "23/07/26 v1",
+  "title": "Using Microsoft Forms to check understanding",
+  "what_it_is": "Microsoft Forms is a Microsoft 365 tool for building a short online form or quiz that people fill in from a link or QR code, with the results collected automatically.",
+  "why_use_it": "It lets you check what a whole class understands in a couple of minutes, without collecting or marking anything on paper. The same form also works as an exit ticket — a short check learners complete just before they leave the room — so you know what to revisit next lesson.",
+  "how_to": [
+    "Go to forms.office.com and sign in with your college Microsoft 365 account.",
+    "Select + New Form.",
+    "Give the form a title, for example \"End of lesson check\".",
+    "Select + Add new to add a question, and choose a question type such as Choice or Text.",
+    "Repeat the previous step for each question you want to ask.",
+    "Select Collect responses (or the Share icon) to get a link or QR code.",
+    "Share the link or QR code with learners so they can respond on their own device.",
+    "Select Responses at the top of the form to see results as they come in."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
