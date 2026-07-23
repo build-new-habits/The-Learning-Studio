@@ -1,6 +1,6 @@
 {
   "id": "reading-writing-support",
-  "version": "23/07/26 v3",
+  "version": "23/07/26 v4",
   "title": "Support reading and writing barriers with digital tools",
   "staff_situations": ["How do I support reading and writing barriers?"],
   "underlying_needs": [
@@ -14,7 +14,9 @@
   "digital_practice_resources": {
     "Read&Write": "read-and-write",
     "captions": "captions",
-    "Immersive Reader": "immersive-reader"
+    "Immersive Reader": "immersive-reader",
+    "dictation": "dictation-and-text-to-speech",
+    "text-to-speech": "dictation-and-text-to-speech"
   },
   "learning_lenses": {
     "accessibility": ["Text-to-speech and line focus support reading", "Dictation reduces the barrier to producing written work", "Captions support learners processing spoken content"],
@@ -23,7 +25,7 @@
   },
   "framework_alignment": ["WCAG: text alternatives", "Digital Skills Framework: assistive technology"],
   "source_area": "Digital Inclusion / Accessible by Design",
-  "last_reviewed": "20/07/26",
+  "last_reviewed": "23/07/26",
   "review_status": "Draft",
   "related_cards": ["accessible-resources"]
 }
