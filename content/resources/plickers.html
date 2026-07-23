@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 23/07/26 v1 — Session 16 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Using Plickers for a class poll without learner devices | The Learning Studio</title>
+<meta name="description" content="A Resource on using Plickers for a class poll without learner devices.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/card.css">
+<link rel="stylesheet" href="../../assets/css/settings.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div>
+    <h1 class="site-title">The Learning Studio</h1>
+    <p class="strapline">Tell me what you're trying to do — I'll show you a digital, accessible way to do it.</p>
+  </div>
+
+  <section class="a11y-controls" aria-label="Display preferences">
+    <button type="button" id="settings-trigger" aria-haspopup="dialog" aria-controls="settings-panel" aria-expanded="false">
+      <span aria-hidden="true">⚙</span> Settings
+    </button>
+  </section>
+</header>
+
+<div class="sett-overlay" id="settings-overlay">
+  <div class="sett-panel" id="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <button type="button" class="sett-close" id="settings-close">✕ Close</button>
+    <p class="sett-title" id="settings-title">Display preferences</p>
+    <p class="sdesc">Saved to your device</p>
+    <p id="settings-status" class="visually-hidden" role="status" aria-live="polite"></p>
+
+    <div class="sg">
+      <span class="sg-label" id="scheme-label">Colour scheme</span>
+      <div class="btn-grp" role="group" aria-labelledby="scheme-label">
+        <button type="button" class="bchoice" data-setting="scheme" data-value="default" aria-pressed="true">Default</button>
+        <button type="button" class="bchoice" data-setting="scheme" data-value="warm" aria-pressed="false">Warm</button>
+        <button type="button" class="bchoice" data-setting="scheme" data-value="dark" aria-pressed="false">Dark</button>
+        <button type="button" class="bchoice" data-setting="scheme" data-value="high-contrast" aria-pressed="false">High contrast</button>
+      </div>
+    </div>
+
+    <div class="sg">
+      <span class="sg-label" id="font-label">Font</span>
+      <div class="btn-grp" role="group" aria-labelledby="font-label">
+        <button type="button" class="bchoice" data-setting="font" data-value="default" aria-pressed="true">Atkinson</button>
+        <button type="button" class="bchoice" data-setting="font" data-value="dyslexia" aria-pressed="false">Dyslexia-friendly</button>
+        <button type="button" class="bchoice" data-setting="font" data-value="serif" aria-pressed="false">Serif</button>
+        <button type="button" class="bchoice" data-setting="font" data-value="mono" aria-pressed="false">Monospace</button>
+      </div>
+    </div>
+
+    <div class="sg">
+      <label class="sg-label" id="text-size-label" for="text-size-range">Text size</label>
+      <div class="range-row">
+        <span aria-hidden="true" style="font-size:0.75rem">A</span>
+        <input type="range" id="text-size-range" min="14" max="24" step="1" value="17" aria-labelledby="text-size-label">
+        <span aria-hidden="true" style="font-size:1.25rem">A</span>
+        <span class="rval" id="text-size-value">17px</span>
+      </div>
+    </div>
+
+    <div class="sg">
+      <label class="sg-label" id="line-spacing-label" for="line-spacing-range">Line spacing</label>
+      <div class="range-row">
+        <input type="range" id="line-spacing-range" min="1.2" max="2.2" step="0.05" value="1.75" aria-labelledby="line-spacing-label">
+        <span class="rval" id="line-spacing-value">1.75</span>
+      </div>
+    </div>
+
+    <div class="sg">
+      <label class="sg-label" id="letter-spacing-label" for="letter-spacing-range">Letter spacing</label>
+      <div class="range-row">
+        <input type="range" id="letter-spacing-range" min="0" max="0.12" step="0.01" value="0" aria-labelledby="letter-spacing-label">
+        <span class="rval" id="letter-spacing-value">0.00em</span>
+      </div>
+    </div>
+
+    <div class="sg">
+      <div class="srow">
+        <label for="toggle-motion">Reduce motion</label>
+        <span class="toggle">
+          <input type="checkbox" id="toggle-motion" data-setting="motion">
+          <span class="tslider" aria-hidden="true"></span>
+        </span>
+      </div>
+      <div class="srow">
+        <label for="toggle-focus">Enhanced focus outlines</label>
+        <span class="toggle">
+          <input type="checkbox" id="toggle-focus" data-setting="focus">
+          <span class="tslider" aria-hidden="true"></span>
+        </span>
+      </div>
+      <div class="srow">
+        <label for="toggle-underline">Underline all links</label>
+        <span class="toggle">
+          <input type="checkbox" id="toggle-underline" data-setting="underline">
+          <span class="tslider" aria-hidden="true"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="sg" id="read-aloud-group" hidden>
+      <span class="sg-label" id="read-aloud-label">Read aloud</span>
+      <p class="sdesc">Reads this page using your browser's built-in voice. No account, no internet service.</p>
+      <button type="button" class="ra-toggle" id="read-aloud-toggle" aria-pressed="false" aria-describedby="read-aloud-label">
+        <svg class="ra-icon ra-icon-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <svg class="ra-icon ra-icon-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" hidden><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+        <span id="read-aloud-toggle-label">Read this page aloud</span>
+      </button>
+      <div class="ra-speed-row">
+        <label class="sg-label" id="read-aloud-speed-label" for="read-aloud-speed-range">Reading speed</label>
+        <div class="range-row">
+          <span aria-hidden="true" style="font-size:0.75rem">Slower</span>
+          <input type="range" id="read-aloud-speed-range" min="0.75" max="1.75" step="0.25" value="1" aria-labelledby="read-aloud-speed-label">
+          <span aria-hidden="true" style="font-size:0.75rem">Faster</span>
+          <span class="rval" id="read-aloud-speed-value">1x</span>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="sett-reset" id="settings-reset">Reset all to defaults</button>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="content-container">
+    <a class="immersive-reader-link" href="https://learn.microsoft.com/en-us/training/educator-center/product-guides/immersive-reader/" target="_blank" rel="noopener noreferrer">
+      <svg class="ir-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M7 9h10M7 12h10M7 15h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Open in Immersive Reader — Microsoft's guidance on this tool
+    </a>
+    <article class="practice-card" data-resource-src="plickers.json">
+      <p>Loading resource…</p>
+    </article>
+  </div>
+</main>
+
+<script src="../../assets/js/settings.js"></script>
+<script src="../../assets/js/readaloud.js"></script>
+<script src="../../assets/js/render-resource.js"></script>
+</body>
+</html>
