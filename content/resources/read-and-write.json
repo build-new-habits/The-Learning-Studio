@@ -1,0 +1,17 @@
+{
+  "id": "read-and-write",
+  "version": "22/07/26 v1",
+  "title": "Using Read&Write for reading and writing support",
+  "what_it_is": "Read&Write is a toolbar, made by Texthelp, that adds reading, writing and research support — including text-to-speech, dictation and word prediction — directly into Word, Edge and other everyday tools.",
+  "why_use_it": "It gives a learner reading and writing support without needing to leave the document or app they're already working in, and works the same way across most of the tools they use day to day.",
+  "how_to": [
+    "Open the Read&Write toolbar from the extensions or add-ins menu in Word, Edge or your browser.",
+    "Select the Play button to have any selected text read aloud.",
+    "Select the microphone icon to dictate text instead of typing it.",
+    "Use the dictionary and prediction tools as you type for extra support with spelling and vocabulary.",
+    "Turn the toolbar on or off per document — it doesn't need to stay on all the time."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "22/07/26",
+  "review_status": "Draft"
+}
