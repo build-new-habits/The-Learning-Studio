@@ -1,6 +1,6 @@
 {
   "id": "accessible-resources",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Make resources accessible with digital tools",
   "staff_situations": ["How do I make resources accessible?"],
   "underlying_needs": [
@@ -20,7 +20,11 @@
   ],
   "digital_practice_resources": {
     "captions": "captions",
-    "Accessibility Checker": "accessibility-checker"
+    "Accessibility Checker": "accessibility-checker",
+    "headings": "alt-text-and-headings",
+    "alt text": "alt-text-and-headings",
+    "accessible templates": "accessible-templates",
+    "colour contrast": "accessibility-checker"
   },
   "learning_lenses": {
     "accessibility": [
