@@ -23,16 +23,14 @@ function check(label, condition) {
   if (!condition) failures++;
 }
 
-console.log("--- Headline & Path A ---");
+console.log("--- Headline ---");
 const headline = document.querySelector(".path-headline");
 check('Headline text is exactly "I need help — which one do I go to?"',
   headline && headline.textContent.trim() === "I need help — which one do I go to?");
 
-const pathALink = document.querySelector(".path-a-link");
-check('Path A link text is exactly "Tell me what you\'re doing"',
-  pathALink && pathALink.textContent.trim() === "Tell me what you're doing");
-check('Path A links to finder.html',
-  pathALink && pathALink.getAttribute("href") === "finder.html");
+console.log("\n--- Path A removed (redundant with Foundations/Inclusion, cut on request) ---");
+check("No .path-a-link sits outside the Path B list (standalone Path A button is gone)",
+  document.querySelector("nav > .path-a") === null);
 
 console.log("\n--- Path B label ---");
 const pathBLabel = document.querySelector(".path-b-label");
