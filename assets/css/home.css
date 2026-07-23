@@ -1,0 +1,168 @@
+/* ==========================================================================
+   The Learning Studio — Homepage (index.html)
+   24/07/26 v1 — Session 26: restructures the homepage around two paths —
+   Finder as the primary entry (Path A) and the four area/Library tiles
+   as a signposted secondary path (Path B). Replaces the plain
+   .main-nav row (base.css) that previously held all four links.
+
+   Reuses the existing four colour tokens and the spacing scale already
+   established in base.css, card.css and finder.css (0.25rem / 0.5rem /
+   0.75rem / 1rem / 1.5rem / 2rem). No new colour, font or spacing
+   values are introduced. Tile surface treatment (background/border/
+   radius/padding) mirrors .practice-card in card.css; the Path A link
+   mirrors .main-nav a.
+
+   Depends on assets/css/tokens.css and assets/css/base.css being
+   loaded first.
+   ========================================================================== */
+
+.path-headline {
+  margin: 0 0 1.5rem;
+  color: var(--color-ink);
+}
+
+.path-a {
+  margin: 0 0 2rem;
+}
+
+.path-a-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: 1rem 2rem;
+  background-color: var(--color-action);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: 2px solid var(--color-action);
+  border-radius: 0.25rem;
+}
+
+.path-a-link:hover {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.path-b-label {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.tile {
+  display: block;
+  height: 100%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-surface);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--color-ink);
+}
+
+.tile:hover,
+.tile:focus-visible {
+  border-color: var(--color-action);
+}
+
+.tile__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+
+.tile__desc {
+  margin: 0 0 0.75rem;
+  color: var(--color-ink);
+}
+
+.tile__desc:last-child {
+  margin-bottom: 0;
+}
+
+.tile__subline {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+/* ----- Dark theme — uses only the existing token pair, same swap
+   .main-nav a and .practice-card already use under Dark. ----- */
+
+body.theme-dark .path-headline,
+body.theme-dark .path-b-label,
+body.theme-dark .tile__title,
+body.theme-dark .tile__desc,
+body.theme-dark .tile__subline {
+  color: var(--color-white);
+}
+
+body.theme-dark .path-a-link {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border-color: var(--color-white);
+}
+
+body.theme-dark .path-a-link:hover {
+  background-color: var(--color-action);
+  color: var(--color-white);
+  border-color: var(--color-action);
+}
+
+body.theme-dark .tile {
+  background-color: var(--color-ink);
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+body.theme-dark .tile:hover,
+body.theme-dark .tile:focus-visible {
+  border-color: var(--color-action);
+}
+
+/* ----- High contrast theme — Session 9's true black/yellow pairing ----- */
+
+body.theme-high-contrast .path-headline,
+body.theme-high-contrast .path-b-label,
+body.theme-high-contrast .tile__title,
+body.theme-high-contrast .tile__desc,
+body.theme-high-contrast .tile__subline {
+  color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .path-a-link {
+  background-color: var(--color-hc-background);
+  color: var(--color-hc-text);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .path-a-link:hover {
+  background-color: var(--color-hc-text);
+  color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .tile {
+  background-color: var(--color-hc-background);
+  border-color: var(--color-hc-text);
+  color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .tile:hover,
+body.theme-high-contrast .tile:focus-visible {
+  border-color: var(--color-hc-text);
+}
