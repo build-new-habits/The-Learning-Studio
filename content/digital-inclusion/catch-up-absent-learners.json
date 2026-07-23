@@ -1,6 +1,6 @@
 {
   "id": "catch-up-absent-learners",
-  "version": "23/07/26 v2",
+  "version": "23/07/26 v3",
   "title": "Catch up absent learners with digital tools",
   "staff_situations": ["How do I catch up absent learners?"],
   "underlying_needs": [
@@ -19,7 +19,8 @@
   ],
   "digital_practice_resources": {
     "Teams recap post": "teams-recap-post",
-    "photo capture": "photo-capture"
+    "photo capture": "photo-capture",
+    "screen or audio explanation": "voice-recording"
   },
   "learning_lenses": {
     "accessibility": [
@@ -36,7 +37,7 @@
     "Digital Skills Framework: digital capture and sharing tools"
   ],
   "source_area": "Digital Inclusion / Accessible by Design",
-  "last_reviewed": "21/07/26",
+  "last_reviewed": "23/07/26",
   "review_status": "Draft",
   "related_cards": ["show-thinking"]
 }
