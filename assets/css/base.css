@@ -67,7 +67,9 @@ body.enhanced-focus button:focus {
 body.underline-links .main-nav a,
 body.underline-links .finder-option,
 body.underline-links .immersive-reader-link,
-body.underline-links .practice-card__tag--linked {
+body.underline-links .practice-card__tag--linked,
+body.underline-links .path-a-link,
+body.underline-links .tile {
   text-decoration: underline;
 }
 
