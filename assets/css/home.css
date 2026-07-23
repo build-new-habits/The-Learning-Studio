@@ -23,10 +23,6 @@
   color: var(--color-ink);
 }
 
-.path-a {
-  margin: 0 0 2rem;
-}
-
 .path-a-link {
   display: inline-flex;
   align-items: center;
