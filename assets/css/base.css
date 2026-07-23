@@ -69,7 +69,8 @@ body.underline-links .finder-option,
 body.underline-links .immersive-reader-link,
 body.underline-links .practice-card__tag--linked,
 body.underline-links .path-a-link,
-body.underline-links .tile {
+body.underline-links .tile,
+body.underline-links .page-nav a {
   text-decoration: underline;
 }
 
@@ -138,6 +139,48 @@ main {
 .content-container {
   max-width: var(--line-length-max);
   margin: 0 auto;
+}
+
+/* ----- Page navigation (Back to Finder/Library + Home) — Session 27.
+   Reuses --color-surface (background, same as .practice-card) and
+   --color-action (link colour, same as generic <a> and .main-nav a).
+   No new colour or component introduced. ----- */
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-surface);
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  color: var(--color-action);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.page-nav a:hover {
+  text-decoration: underline;
+}
+
+body.theme-dark .page-nav {
+  background-color: var(--color-ink);
+}
+
+body.theme-dark .page-nav a {
+  color: var(--color-white);
+}
+
+body.theme-high-contrast .page-nav {
+  background-color: var(--color-hc-background);
+}
+
+body.theme-high-contrast .page-nav a {
+  color: var(--color-hc-text);
 }
 
 /* ----- Navigation ----- */
