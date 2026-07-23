@@ -1,6 +1,6 @@
 {
   "id": "catch-up-absent-learners",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Catch up absent learners with digital tools",
   "staff_situations": ["How do I catch up absent learners?"],
   "underlying_needs": [
@@ -17,6 +17,10 @@
     "accessible summary",
     "retrieval questions from lesson notes"
   ],
+  "digital_practice_resources": {
+    "Teams recap post": "teams-recap-post",
+    "photo capture": "photo-capture"
+  },
   "learning_lenses": {
     "accessibility": [
       "Accessible summaries can be read with a screen reader or text-to-speech tool",
