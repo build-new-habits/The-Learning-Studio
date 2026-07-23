@@ -1,6 +1,6 @@
 {
   "id": "check-for-understanding",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Run a quick digital check for understanding",
   "staff_situations": ["How do I run a quick digital check for understanding?"],
   "underlying_needs": [
@@ -18,6 +18,12 @@
     "exit ticket",
     "photo or voice evidence"
   ],
+  "digital_practice_resources": {
+    "mini whiteboards": "mini-whiteboards",
+    "Plickers": "plickers",
+    "Forms": "forms",
+    "polls": "teams-polls"
+  },
   "learning_lenses": {
     "accessibility": [
       "Forms and polls can be completed using assistive technology",
