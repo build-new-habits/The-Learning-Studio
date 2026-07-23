@@ -1,0 +1,20 @@
+{
+  "id": "voice-recording",
+  "version": "23/07/26 v1",
+  "title": "Recording an audio explanation",
+  "what_it_is": "Voice Recorder is a free app built into Windows that records sound from your microphone and saves it as an audio file you can share.",
+  "why_use_it": "A short audio recording lets an absent learner hear an explanation in your own words, without you needing to write it all out or set up a video.",
+  "how_to": [
+    "Select the Start button (bottom-left of the screen), type Voice Recorder, and select the app when it appears.",
+    "Select the large microphone button in the middle of the screen to start recording.",
+    "Speak your explanation. A timer at the top of the screen shows how long you've been recording.",
+    "Select the black square button to stop the recording. It saves automatically.",
+    "To find your recording, select it from the list on the left of the Voice Recorder window, or open File Explorer and go to Documents, then Sound recordings.",
+    "To share it, right-click the recording in File Explorer, select Share, and choose Teams, email or OneDrive.",
+    "To record inside Teams or OneNote instead of using a separate app: in a Teams channel, select the paperclip icon by the message box and choose the microphone option; in OneNote, go to the Insert tab and select Record."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Device & Windows Basics"
+}
