@@ -60,6 +60,19 @@ allJsonFiles.forEach(file => {
         hasErrors = true;
     }
 
+    // Category check for resources (Session 15): enforced explicitly here
+    // for a clear, named error message, same hard-fail pattern as the
+    // framework_alignment vocabulary check below — the schema's own enum
+    // (data/resource.schema.json) already blocks an invalid value via the
+    // generic Schema Validation error above, this just names the problem.
+    if (isResource && data.category) {
+        const allowedCategories = resourceSchema.properties.category.enum;
+        if (!allowedCategories.includes(data.category)) {
+            console.error(`\n[FAIL] Category Error in ${file}: '${data.category}' is not in the controlled category list.`);
+            hasErrors = true;
+        }
+    }
+
     // Vocabulary check for cards
     if (isCard && data.framework_alignment) {
         data.framework_alignment.forEach(fw => {
