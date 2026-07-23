@@ -1,6 +1,6 @@
 {
   "id": "organise-posts-and-files",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Organise posts and files so learners can find things",
   "staff_situations": ["How do I organise posts and files so learners can find things?"],
   "underlying_needs": [
@@ -16,6 +16,10 @@
     "pinned posts for key resources",
     "channel structure by topic or unit"
   ],
+  "digital_practice_resources": {
+    "channel structure by topic or unit": "channel-structure",
+    "consistent folder and file naming": "naming-conventions"
+  },
   "learning_lenses": {
     "accessibility": [
       "Colour-coding is paired with clear text labels so meaning never depends on colour alone",
