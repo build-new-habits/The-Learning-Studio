@@ -1,0 +1,22 @@
+{
+  "id": "file-and-sharing-permissions",
+  "version": "23/07/26 v1",
+  "title": "Checking and managing file sharing permissions",
+  "what_it_is": "File sharing permissions are the settings that control who can see, open or change a file you've shared — for example a Word document, a OneDrive folder or a file posted in a Teams channel.",
+  "why_use_it": "Checking permissions before you share, and reviewing them afterwards, means the right people can get to a file — and no one else can.",
+  "how_to": [
+    "Before sharing a file, right-click it in OneDrive or Teams and select Share.",
+    "In the Share window, select the current access level shown — it usually says something like \"People in [organisation] with the link\" or \"Specific people\".",
+    "Choose who the file is for. \"Specific people\" limits access to named individuals — use this for anything personal or 1:1.",
+    "Choose the access level for those people: Can view lets someone open and read the file only. Can edit lets them open the file and change it.",
+    "Select Apply, then select Send or Copy link to share.",
+    "To check or change permissions on a file that's already shared, right-click the file, select Share, then select Manage access.",
+    "The Manage access screen lists everyone who currently has access, and whether each person can view or edit.",
+    "To remove someone's access, select their name, then select Remove or Stop sharing.",
+    "Once you've removed access, that person's link will no longer open the file."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Files & Permissions"
+}
