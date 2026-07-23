@@ -29,6 +29,25 @@
   max-width: var(--line-length-max);
 }
 
+/* ----- Category headings — Session 15: Library groups resources under
+   these. Reuses --color-ink and the existing --panel-border divider
+   token (already defined in tokens.css for the settings panel); no new
+   colour or font is introduced. First heading in the list sits flush
+   under the intro paragraph, so its top margin is removed below. ----- */
+
+.category-heading {
+  margin: 2rem 0 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--panel-border);
+  color: var(--color-ink);
+}
+
+.category-heading:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
 .finder-option {
   display: flex;
   align-items: center;
@@ -52,8 +71,13 @@
    this is the unchanged block that Dark and High contrast previously
    shared, moved to its own class. ----- */
 
-body.theme-dark .finder-heading {
+body.theme-dark .finder-heading,
+body.theme-dark .category-heading {
   color: var(--color-white);
+}
+
+body.theme-dark .category-heading {
+  border-top-color: var(--color-white);
 }
 
 body.theme-dark .finder-option {
@@ -69,8 +93,13 @@ body.theme-dark .finder-option:hover {
 
 /* ----- High contrast theme — Session 9: true black/yellow ----- */
 
-body.theme-high-contrast .finder-heading {
+body.theme-high-contrast .finder-heading,
+body.theme-high-contrast .category-heading {
   color: var(--color-hc-text);
+}
+
+body.theme-high-contrast .category-heading {
+  border-top-color: var(--color-hc-text);
 }
 
 body.theme-high-contrast .finder-option {
