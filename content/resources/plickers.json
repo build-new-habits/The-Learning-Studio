@@ -1,0 +1,21 @@
+{
+  "id": "plickers",
+  "version": "23/07/26 v1",
+  "title": "Using Plickers for a class poll without learner devices",
+  "what_it_is": "Plickers is a free app and set of printed response cards that let you poll a class and collect answers using only your own phone — learners don't need a device.",
+  "why_use_it": "It gives you the speed of a digital poll in rooms where learners don't have devices, or where you'd rather they didn't use one. Each learner just holds up their card.",
+  "how_to": [
+    "Download the Plickers app on your phone and create a free account at plickers.com.",
+    "Print a set of Plickers cards from the website — each card has a unique pattern and is numbered for a specific learner or seat.",
+    "In the app or on plickers.com, add a class and build a question, for example a multiple-choice question with up to four answers.",
+    "Give each learner their numbered card.",
+    "Display the question on the board or screen so learners can see the answer options.",
+    "Ask learners to hold up their card, turned so the letter matching their answer is at the top.",
+    "Open the question in the Plickers app and use your phone's camera to scan the room — the app reads each card automatically.",
+    "Check the live results shown in the app or on the shared screen."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
