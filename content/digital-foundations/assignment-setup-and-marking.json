@@ -5,8 +5,8 @@
   "staff_situations": ["How do I set up and mark an Assignment?"],
   "underlying_needs": [
     "A clear, consistent way to set work, collect submissions and return feedback in one place",
-    "Reliable digital marking that avoids lost paperwork and gives learners a saved record of feedback",
-    "A way to track completion and grades across the group without chasing individual submissions"
+    "Marking done digitally means no lost paperwork, and learners always have a saved record of their feedback",
+    "A way to see who's completed work and how the group is doing on grades, without having to chase every submission individually"
   ],
   "pyramid_layers": ["Digital Foundations"],
   "tech_routes": ["digital"],
@@ -19,12 +19,12 @@
   ],
   "learning_lenses": {
     "accessibility": [
-      "Digital rubrics and inline feedback can be read with a screen reader or text-to-speech tool",
-      "Learners can return to assignment instructions and feedback in their own time, at their own pace"
+      "Digital rubrics — the marking criteria built into Assignments — and inline feedback can both be read using a screen reader — software that reads the screen aloud — or a text-to-speech tool",
+      "Learners can look back at the assignment instructions and their feedback whenever they need to, at their own pace"
     ],
     "inclusive_practice": [
       "Consistent assignment structure means every learner knows what to expect and where to find it",
-      "Digital submission gives a learner more than one route to submit work if writing by hand is a barrier"
+      "Submitting work digitally gives learners another way to hand it in if writing by hand is difficult for them"
     ]
   },
   "framework_alignment": [
