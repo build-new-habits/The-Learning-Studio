@@ -1,0 +1,17 @@
+{
+  "id": "team-creation",
+  "version": "22/07/26 v1",
+  "title": "Creating a Team in Microsoft Teams",
+  "what_it_is": "Team creation is setting up a new Team in Microsoft Teams — the shared space a group uses for channels, files, posts and conversations.",
+  "why_use_it": "Getting the setup right at the start means the group has one consistent, findable space from day one, rather than posts and files scattered across email and chat.",
+  "how_to": [
+    "Open Teams and select Teams from the left-hand menu.",
+    "Select Join or create a team, then Create team.",
+    "Choose the team type that matches your group, for example Class.",
+    "Name the team clearly, following your area's naming convention.",
+    "Add members, and check owner and member roles are set correctly before sharing the link."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "22/07/26",
+  "review_status": "Draft"
+}
