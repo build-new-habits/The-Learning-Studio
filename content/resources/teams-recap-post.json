@@ -1,0 +1,20 @@
+{
+  "id": "teams-recap-post",
+  "version": "23/07/26 v1",
+  "title": "Posting a Teams recap for absent learners",
+  "what_it_is": "A Teams recap post is a short message in a Teams class channel that sums up what happened in a lesson, so a learner who missed it can read what they need to catch up.",
+  "why_use_it": "It gives an absent learner a quick, clear way to catch up in their own time, without needing to ask a classmate or wait to speak to you.",
+  "how_to": [
+    "Open Teams and select your class team from the left-hand list.",
+    "Select the channel you want to post in, such as General.",
+    "Select the New conversation or New post button, usually near the bottom of the screen.",
+    "Write a short summary of what the lesson covered — what was taught, and anything the learner needs to do to catch up.",
+    "Add any files, links or photos the learner will need, using the paperclip or attachment icon in the post box.",
+    "Select Send (the arrow icon) to post the recap to the channel.",
+    "Consider using an @mention to tag the specific learner, so they get a notification directly."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Teams & Communication"
+}
