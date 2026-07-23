@@ -15,9 +15,20 @@
     },
     "source_area": { "type": "string" },
     "last_reviewed": { "type": "string" },
-    "review_status": { "type": "string", "enum": ["Draft", "Current", "Needs review", "Archived"] }
+    "review_status": { "type": "string", "enum": ["Draft", "Current", "Needs review", "Archived"] },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Teams & Communication",
+        "Assessment Tools",
+        "Files & Permissions",
+        "Accessibility & Assistive Technology",
+        "Device & Windows Basics",
+        "AI & Innovation"
+      ]
+    }
   },
   "required": [
-    "id", "version", "title", "what_it_is", "why_use_it", "how_to", "source_area", "last_reviewed", "review_status"
+    "id", "version", "title", "what_it_is", "why_use_it", "how_to", "source_area", "last_reviewed", "review_status", "category"
   ]
 }
