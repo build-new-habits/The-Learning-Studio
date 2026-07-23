@@ -1,16 +1,18 @@
 /* ==========================================================================
    The Learning Studio — Homepage (index.html)
-   24/07/26 v1 — Session 26: restructures the homepage around two paths —
-   Finder as the primary entry (Path A) and the four area/Library tiles
-   as a signposted secondary path (Path B). Replaces the plain
-   .main-nav row (base.css) that previously held all four links.
+   24/07/26 v2 — Session 26 revision (post-review): replaced the 3-column
+   card grid with a single-column list so Library never sits orphaned
+   on its own row, and reused .path-a-link (the same button component
+   as the Path A link) for each item's title, instead of a separate
+   "tile" box style. This is a deliberate consolidation onto one button
+   component — Path A's button and each Path B item's title button now
+   share identical styling because they're the same component, not two
+   different ones.
 
    Reuses the existing four colour tokens and the spacing scale already
    established in base.css, card.css and finder.css (0.25rem / 0.5rem /
    0.75rem / 1rem / 1.5rem / 2rem). No new colour, font or spacing
-   values are introduced. Tile surface treatment (background/border/
-   radius/padding) mirrors .practice-card in card.css; the Path A link
-   mirrors .main-nav a.
+   values are introduced.
 
    Depends on assets/css/tokens.css and assets/css/base.css being
    loaded first.
@@ -52,40 +54,22 @@
   color: var(--color-ink);
 }
 
-.tile-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+.path-b-list {
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: none;
+  max-width: var(--line-length-max);
 }
 
-.tile {
-  display: block;
-  height: 100%;
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-surface);
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: var(--color-ink);
-}
-
-.tile:hover,
-.tile:focus-visible {
-  border-color: var(--color-action);
-}
-
-.tile__title {
+.path-b-item__heading {
   margin: 0 0 0.75rem;
-  font-size: 1.25rem;
-  color: var(--color-ink);
 }
 
 .tile__desc {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   color: var(--color-ink);
 }
 
@@ -105,7 +89,6 @@
 
 body.theme-dark .path-headline,
 body.theme-dark .path-b-label,
-body.theme-dark .tile__title,
 body.theme-dark .tile__desc,
 body.theme-dark .tile__subline {
   color: var(--color-white);
@@ -123,22 +106,10 @@ body.theme-dark .path-a-link:hover {
   border-color: var(--color-action);
 }
 
-body.theme-dark .tile {
-  background-color: var(--color-ink);
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
-body.theme-dark .tile:hover,
-body.theme-dark .tile:focus-visible {
-  border-color: var(--color-action);
-}
-
 /* ----- High contrast theme — Session 9's true black/yellow pairing ----- */
 
 body.theme-high-contrast .path-headline,
 body.theme-high-contrast .path-b-label,
-body.theme-high-contrast .tile__title,
 body.theme-high-contrast .tile__desc,
 body.theme-high-contrast .tile__subline {
   color: var(--color-hc-text);
@@ -153,16 +124,5 @@ body.theme-high-contrast .path-a-link {
 body.theme-high-contrast .path-a-link:hover {
   background-color: var(--color-hc-text);
   color: var(--color-hc-background);
-  border-color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .tile {
-  background-color: var(--color-hc-background);
-  border-color: var(--color-hc-text);
-  color: var(--color-hc-text);
-}
-
-body.theme-high-contrast .tile:hover,
-body.theme-high-contrast .tile:focus-visible {
   border-color: var(--color-hc-text);
 }
