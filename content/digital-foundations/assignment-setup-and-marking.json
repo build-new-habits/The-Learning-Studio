@@ -1,6 +1,6 @@
 {
   "id": "assignment-setup-and-marking",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Set up and mark an Assignment",
   "staff_situations": ["How do I set up and mark an Assignment?"],
   "underlying_needs": [
@@ -18,7 +18,9 @@
     "returning grades"
   ],
   "digital_practice_resources": {
-    "Assignment creation": "assignment-creation"
+    "Assignment creation": "assignment-creation",
+    "rubrics": "assignment-feedback-and-rubrics",
+    "inline feedback and annotation": "assignment-feedback-and-rubrics"
   },
   "learning_lenses": {
     "accessibility": [
