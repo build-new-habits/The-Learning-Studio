@@ -1,0 +1,20 @@
+{
+  "id": "assignment-feedback-and-rubrics",
+  "version": "23/07/26 v1",
+  "title": "Using rubrics and inline feedback in Assignments",
+  "what_it_is": "A rubric is a built-in marking grid attached to a Teams Assignment, listing the criteria and points a piece of work is marked against. Inline feedback is a comment or annotation added directly onto a learner's submitted document, next to the part it refers to.",
+  "why_use_it": "A rubric makes marking criteria clear and consistent for every learner, and inline feedback lets a learner see exactly which part of their work a comment relates to, rather than a general note at the end.",
+  "how_to": [
+    "Open the Assignment in Teams, either while creating it or from an existing one.",
+    "Select Add rubric, then choose New rubric to build one from scratch, or Reuse rubric to use one you've created before.",
+    "Add each criterion you're marking against, along with the points or rating levels for it, then select Attach.",
+    "Once learners have submitted their work, open a submission from the Assignment's grading view.",
+    "Use the rubric on the right-hand side to select the points or level for each criterion — this fills in the overall grade automatically.",
+    "To leave inline feedback, select the part of the document you want to comment on, then select New Comment and type your feedback.",
+    "Once marking is complete, select Return to send the grade and feedback back to the learner."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
