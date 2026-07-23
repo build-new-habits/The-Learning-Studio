@@ -1,0 +1,20 @@
+{
+  "id": "teams-polls",
+  "version": "23/07/26 v1",
+  "title": "Using Polls in a Microsoft Teams meeting",
+  "what_it_is": "Polls is a built-in app in Microsoft Teams that lets you ask a live multiple-choice question during a Teams meeting or class, with results shown as they come in.",
+  "why_use_it": "It gives you a quick, anonymous check of understanding during an online or hybrid lesson, without learners needing a separate app or a login — everything happens inside the Teams meeting they're already in.",
+  "how_to": [
+    "During a Teams meeting, select Apps in the meeting toolbar at the top.",
+    "Search for and select Polls.",
+    "Select + New poll.",
+    "Type your question and add the answer options.",
+    "Turn on Keep responses anonymous if you don't want answers linked to individual names.",
+    "Select Save, then Launch to send the poll to everyone in the meeting.",
+    "Watch results appear live as learners respond, and select End poll when you're ready to share the results with the class."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
