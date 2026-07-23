@@ -4,8 +4,8 @@
   "title": "Keep files and sharing permissions in good order",
   "staff_situations": ["How do I keep files and sharing permissions in good order?"],
   "underlying_needs": [
-    "Knowing who can see, edit and share a file, and checking this is set correctly before it's shared",
-    "Editable access to another learner's personal or 1:1 records must never happen — this is a practice rule, stated plainly, not a judgement call to make case by case",
+    "Knowing who can see, edit and share a file. Checking this is set correctly before it's shared",
+    "Editable access to another learner's personal or 1:1 — one-to-one — records must never happen — this is a practice rule, stated plainly, not a judgement call to make case by case",
     "Reviewing and removing access when it's no longer needed"
   ],
   "pyramid_layers": ["Digital Foundations"],
@@ -18,14 +18,14 @@
   ],
   "learning_lenses": {
     "accessibility": [
-      "Correctly scoped permissions mean a learner using assistive technology only encounters files intended for them, rather than a cluttered or confusing space"
+      "Setting permissions correctly means a learner using assistive technology — like a screen reader or switch access — only sees files meant for them, not a cluttered, confusing space"
     ],
     "inclusive_practice": [
-      "Protects every learner's personal and 1:1 records equally — this is not optional or dependent on who is asking",
-      "Clear permission structure prevents a learner from accidentally being given access to another learner's information"
+      "Protects every learner's personal and 1:1 records equally — this isn't optional, and doesn't depend on who's asking",
+      "Clear permissions stop a learner from accidentally being given access to another learner's information"
     ],
     "trauma_informed": [
-      "Avoids the distress of a learner discovering their personal or 1:1 records were visible to someone they shouldn't have been"
+      "Avoids the distress of a learner finding out that their personal or 1:1 records were visible to someone who shouldn't have seen them"
     ]
   },
   "framework_alignment": [
