@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 21/07/26 v4 — Session 10: added Library link to main nav -->
+<!-- 24/07/26 v5 — Session 26: homepage restructured around two paths —
+     Finder as primary entry (Path A), area/Library tiles as signposted
+     secondary path (Path B). Replaces the old flat .main-nav row. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Learning Studio</title>
@@ -13,6 +15,7 @@
 
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
 <link rel="stylesheet" href="assets/css/settings.css">
 </head>
 <body>
@@ -134,12 +137,43 @@
 
 <main id="main-content">
   <div class="content-container">
-    <nav aria-label="Digital Learning Pyramid">
-      <ul class="main-nav">
-        <li><a href="finder.html">Digital Foundations</a></li>
-        <li><a href="finder.html">Digital Inclusion</a></li>
-        <li><a href="#">Digital Innovation</a></li>
-        <li><a href="library.html">Library</a></li>
+    <h2 class="path-headline">I need help — which one do I go to?</h2>
+
+    <nav aria-label="Ways to start">
+      <p class="path-a">
+        <a class="path-a-link" href="finder.html">Tell me what you're doing</a>
+      </p>
+
+      <p class="path-b-label" id="path-b-label">I already know the area I need</p>
+
+      <ul class="tile-grid" aria-labelledby="path-b-label">
+        <li>
+          <a class="tile" href="finder.html">
+            <h3 class="tile__title">Digital Foundations</h3>
+            <p class="tile__desc">Building confidence with the everyday Microsoft 365 tools every role depends on — email, Teams, files, and accessibility as a habit from day one.</p>
+            <p class="tile__subline">Start here if digital tools feel new, or you want to lock in the basics.</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="library.html#cat-accessibility">
+            <h3 class="tile__title">Digital Inclusion</h3>
+            <p class="tile__desc">Using digital tools purposefully so every learner can access, participate and succeed — assistive technology, accessible design, and inclusive practice for SEND, ESOL and beyond.</p>
+            <p class="tile__subline">Start here if you're comfortable day-to-day and want your practice to be more inclusive.</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="#">
+            <h3 class="tile__title">Digital Innovation</h3>
+            <p class="tile__desc">Reshaping what's possible with digital and AI — building workflows, leading change, and helping good practice spread beyond your own room.</p>
+            <p class="tile__subline">Start here if you're ready to experiment, lead, or explore AI.</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="library.html">
+            <h3 class="tile__title">Library</h3>
+            <p class="tile__desc">Every tool, guide and resource in one place — browse by type instead of by situation.</p>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
