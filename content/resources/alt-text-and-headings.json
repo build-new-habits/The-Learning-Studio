@@ -1,0 +1,19 @@
+{
+  "id": "alt-text-and-headings",
+  "version": "23/07/26 v1",
+  "title": "Adding alt text and heading structure",
+  "what_it_is": "Alt text is a short written description added to an image, so screen reading software can describe it. Headings are the built-in title styles — Heading 1, Heading 2 and so on — used to structure a document so it isn't just plain, unstructured text.",
+  "why_use_it": "Together, alt text and headings let someone using a screen reader — software that reads the screen aloud — understand an image and move through a document by its structure, instead of having everything read out in one long, flat block.",
+  "how_to": [
+    "To add alt text in Word, PowerPoint or Outlook: right-click the image and select Edit Alt Text (or View Alt Text, depending on the app).",
+    "Type a short, plain description of what the image shows and what it's for — for example \"Bar chart showing attendance by month\" rather than \"image1.jpg\".",
+    "If an image is purely decorative and adds no information, tick the Mark as decorative box instead of writing a description.",
+    "To add heading structure in Word: select the text you want to use as a heading, then go to the Home tab and select Heading 1 for a main title, or Heading 2, Heading 3 and so on for sections within it.",
+    "Use headings in order — don't skip from Heading 1 straight to Heading 3 — so the structure makes sense to someone navigating by heading alone.",
+    "Avoid making text look like a heading just by making it bold or bigger — use the actual Heading style, or screen reading software won't recognise it as one."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Accessibility & Assistive Technology"
+}
