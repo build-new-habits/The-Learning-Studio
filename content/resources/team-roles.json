@@ -1,0 +1,19 @@
+{
+  "id": "team-roles",
+  "version": "23/07/26 v1",
+  "title": "Setting owner and member roles in a Team",
+  "what_it_is": "Every person in a Teams team has a role — either Owner or Member. The Owner can change the team's settings and manage who's in it; a Member can take part but can't change those settings.",
+  "why_use_it": "Getting roles right from the start means the people who should be able to manage the space can, and everyone else has a space that's set up consistently and can't be changed by accident.",
+  "how_to": [
+    "Open Teams and select the team you want to check from the left-hand list.",
+    "Select the three dots (⋯) next to the team name and choose Manage team.",
+    "Select the Members tab to see everyone currently in the team, along with their role.",
+    "To change someone's role, find their name in the list, select the role shown next to it — Owner or Member — and choose the correct one from the dropdown.",
+    "To add a new person, select Add member near the top of the screen, type their name, then select Add. New people are added as Members by default.",
+    "Keep the number of Owners to those who genuinely need to manage the team's settings — every other person in the group only needs Member access to take part fully."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Teams & Communication"
+}
