@@ -1,6 +1,6 @@
 {
   "id": "insights-grades-reflect",
-  "version": "21/07/26 v1",
+  "version": "23/07/26 v2",
   "title": "Use Insights, Grades and Reflect to check how learners are doing",
   "staff_situations": ["How do I use Insights, Grades and Reflect to check how learners are doing?"],
   "underlying_needs": [
@@ -16,6 +16,12 @@
     "Reflect check-ins",
     "engagement and completion trends"
   ],
+  "digital_practice_resources": {
+    "Insights dashboard": "insights-and-grades",
+    "Grades overview": "insights-and-grades",
+    "engagement and completion trends": "insights-and-grades",
+    "Reflect check-ins": "reflect-checkins"
+  },
   "learning_lenses": {
     "accessibility": [
       "Reflect check-ins let a learner who finds speaking up difficult share how they're doing privately and without pressure"
@@ -33,7 +39,7 @@
     "QFT: checking understanding"
   ],
   "source_area": "Digital Foundations / Digital Skills Framework",
-  "last_reviewed": "21/07/26",
+  "last_reviewed": "23/07/26",
   "review_status": "Draft",
   "related_cards": []
 }
