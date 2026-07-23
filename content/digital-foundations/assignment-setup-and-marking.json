@@ -17,6 +17,9 @@
     "inline feedback and annotation",
     "returning grades"
   ],
+  "digital_practice_resources": {
+    "Assignment creation": "assignment-creation"
+  },
   "learning_lenses": {
     "accessibility": [
       "Digital rubrics — the marking criteria built into Assignments — and inline feedback can both be read using a screen reader — software that reads the screen aloud — or a text-to-speech tool",
