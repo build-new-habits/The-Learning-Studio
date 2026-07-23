@@ -1,0 +1,19 @@
+{
+  "id": "assignment-due-dates",
+  "version": "23/07/26 v1",
+  "title": "Setting due dates and returning grades in Assignments",
+  "what_it_is": "A due date is the deadline set on a Teams Assignment, which can also trigger reminders to learners as it approaches. Returning grades is the step where a marked Assignment, with its grade and any feedback, is sent back to the learner.",
+  "why_use_it": "A clear due date, backed up by an automatic reminder, means fewer missed deadlines without you having to chase every learner individually — and returning grades properly means a learner gets their result and feedback in one place, as soon as marking is done.",
+  "how_to": [
+    "While creating or editing an Assignment in Teams, find the Due section and select the date and time you want work to be submitted by.",
+    "Teams automatically shows learners a countdown to the due date on their Assignments tab, and flags the Assignment if they haven't submitted as the deadline approaches.",
+    "To set an additional reminder, use the Schedule option to have the Assignment post to the channel at a chosen date and time, prompting learners before the deadline.",
+    "Once you've finished marking a submission, open it from the Assignment's grading view and check the grade shown is correct.",
+    "Select Return on that submission to send the grade and feedback back to the individual learner.",
+    "To return grades for everyone at once, select Return all from the top of the grading view — only do this once every submission you want to release has been marked."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
