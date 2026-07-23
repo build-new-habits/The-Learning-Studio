@@ -1,0 +1,17 @@
+{
+  "id": "assignment-creation",
+  "version": "22/07/26 v1",
+  "title": "Creating an Assignment in Teams",
+  "what_it_is": "Assignment creation is setting up a piece of work in Teams Assignments, so learners can see instructions, attach their own files and submit in one place.",
+  "why_use_it": "It keeps instructions, submissions and feedback together in one place, rather than spread across email, paper and separate folders.",
+  "how_to": [
+    "Open the Assignments tab in your Team.",
+    "Select Create, then Assignment.",
+    "Add a title and clear instructions for what learners need to do.",
+    "Attach any files learners need, and add a rubric if you're using one.",
+    "Set a due date, then select Assign to publish it to the group."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "22/07/26",
+  "review_status": "Draft"
+}
