@@ -1,0 +1,20 @@
+{
+  "id": "reflect-checkins",
+  "version": "23/07/26 v1",
+  "title": "Running a Reflect check-in",
+  "what_it_is": "Reflect is a built-in Teams tool that lets you ask your class a quick question and get an answer back from each learner privately, without anyone else in the group seeing how they responded.",
+  "why_use_it": "A Reflect check-in gives every learner a private way to answer, so you hear from people who might not put their hand up or speak out in front of the group.",
+  "how_to": [
+    "Open your class team in Teams.",
+    "Select the Reflect tab at the top of the team. If you can't see it, select the + to the right of your existing tabs and search for Reflect to add it.",
+    "Select New check-in.",
+    "Type your question, then choose the response options learners will pick from. Reflect includes ready-made options, such as an emoji-based mood scale, or you can write your own.",
+    "Set a date and time for the check-in to open, then select Send.",
+    "Learners open the check-in from their own Teams app, select the response that fits, and submit it. Their individual answer is only visible to you, not to the rest of the class.",
+    "To see the results, open the check-in from the Reflect tab. Responses are shown as a chart of how many learners picked each option, without naming who picked what."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
