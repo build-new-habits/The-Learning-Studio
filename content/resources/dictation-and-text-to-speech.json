@@ -1,0 +1,22 @@
+{
+  "id": "dictation-and-text-to-speech",
+  "version": "23/07/26 v1",
+  "title": "Using Dictate and Read Aloud in Word and Outlook",
+  "what_it_is": "Dictate is a built-in Microsoft 365 tool that turns your spoken words into typed text in Word, Outlook and other Office apps. Read Aloud is a separate built-in tool that reads text on the page back to you, out loud, using a computer voice.",
+  "why_use_it": "Dictate lets a learner get their ideas down without needing to type, which helps if writing by hand or typing is difficult or slow. Read Aloud lets a learner listen to a document instead of, or alongside, reading it themselves, which helps with checking work or following along with dense text.",
+  "how_to": [
+    "Open Word, Outlook, or another Microsoft 365 app, and go to the Home tab at the top of the screen.",
+    "Select the Dictate button — a microphone icon, usually near the right-hand end of the Home tab.",
+    "Wait for the red recording dot to appear, then start speaking. Your words appear as typed text on the page as you talk.",
+    "Say punctuation out loud where you want it, for example 'comma' or 'full stop', and Dictate adds the symbol.",
+    "Select the Dictate button again to stop recording.",
+    "To use Read Aloud, first select the text you want read, or leave nothing selected to have it read from the top of the page.",
+    "Go to the Review tab at the top of the screen and select Read Aloud.",
+    "Use the on-screen controls to pause, skip back or forward a paragraph, or change the reading speed.",
+    "Select the X on the Read Aloud toolbar to stop and close it."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Accessibility & Assistive Technology"
+}
