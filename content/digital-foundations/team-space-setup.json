@@ -17,6 +17,9 @@
     "owner and member roles",
     "pinned key resources"
   ],
+  "digital_practice_resources": {
+    "Team creation": "team-creation"
+  },
   "learning_lenses": {
     "accessibility": [
       "Consistent channel names and structure make the space easier to find your way around if you use a screen reader — software that reads the screen aloud — or switch access — a way of controlling a device without a mouse or touchscreen",
