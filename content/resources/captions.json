@@ -1,0 +1,18 @@
+{
+  "id": "captions",
+  "version": "22/07/26 v1",
+  "title": "Adding captions to video and presentation content",
+  "what_it_is": "Captions are text shown on screen that match spoken words in a video or presentation, appearing in time with the audio.",
+  "why_use_it": "Captions let learners follow spoken content by reading rather than only listening — essential for anyone who is deaf or hard of hearing, and genuinely useful for anyone learning in a noisy space or in a second language.",
+  "how_to": [
+    "Open your video in Stream (Microsoft's video platform, found inside Teams and SharePoint).",
+    "Select the three dots (⋯) above the video and choose Edit video details.",
+    "Go to the Captions tab and select Generate automatically.",
+    "Read through the generated caption text and fix any mistakes — automatic captions get names and technical terms wrong fairly often.",
+    "Select Publish once you're happy with it.",
+    "For live captions during a PowerPoint presentation, turn on Subtitle Settings from the Slide Show tab before you present."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "22/07/26",
+  "review_status": "Draft"
+}
