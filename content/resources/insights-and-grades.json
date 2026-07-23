@@ -1,0 +1,19 @@
+{
+  "id": "insights-and-grades",
+  "version": "23/07/26 v1",
+  "title": "Viewing Insights and Grades in Teams",
+  "what_it_is": "Insights is a built-in Teams tool that pulls together engagement and completion trends for your class into one dashboard — things like how many learners have handed in an Assignment, and how activity is spread across the group over time. Grades is a separate tab in your class team that lists every learner alongside their grade for each Assignment, all in one table.",
+  "why_use_it": "Instead of opening each Assignment separately to check who's submitted or looking up grades one learner at a time, Insights and Grades bring that information together in one place, so you're not repeating the same steps for every learner.",
+  "how_to": [
+    "Open your class team in Teams.",
+    "Select the Insights tab at the top of the team. If you can't see it, select the + to the right of your existing tabs and search for Insights to add it.",
+    "The Insights dashboard opens, showing engagement and completion trends for the group, such as Assignment completion rates and activity over time.",
+    "To see grades, select the Grades tab at the top of the team instead. If it isn't there, add it the same way you added Insights.",
+    "The Grades tab shows a table with every learner listed down the left and every Assignment across the top, with each grade filled in once you've returned it.",
+    "Select a column heading to sort the table by that Assignment, or select a row to see one learner's grades across everything they've submitted."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Assessment Tools"
+}
