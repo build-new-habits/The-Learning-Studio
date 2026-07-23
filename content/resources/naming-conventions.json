@@ -1,0 +1,18 @@
+{
+  "id": "naming-conventions",
+  "version": "23/07/26 v1",
+  "title": "Using consistent file and folder naming",
+  "what_it_is": "A naming convention is a fixed pattern you use every time you name a file or folder — for example always starting with the date, then the topic, then the file type.",
+  "why_use_it": "When every file follows the same pattern, a learner can tell what something is and when it's from without opening it, and files sort into a sensible order automatically.",
+  "how_to": [
+    "Decide on a pattern before you start adding files — for example: YYYY-MM-DD_Topic_Type, so a file might be named 2026-07-23_Unit1_Worksheet.",
+    "Use the same pattern for folders too — for example Unit1_Resources rather than a mix of different styles across folders.",
+    "Avoid spaces at the start of a name, and avoid special characters like / \\ : * ? \" < > | — these can cause errors when a file is opened on some devices. Use an underscore or hyphen instead of a space if you prefer.",
+    "When you rename an existing file, right-click it in OneDrive, Teams or File Explorer, select Rename, type the new name in your chosen pattern, then press Enter.",
+    "Once a pattern is agreed for a shared space, keep it consistent — a mismatched name is often the reason a learner can't find something they know exists."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Files & Permissions"
+}
