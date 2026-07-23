@@ -40,8 +40,8 @@ check('Path B label text is exactly "I already know the area I need"',
   pathBLabel && pathBLabel.textContent.trim() === "I already know the area I need");
 
 console.log("\n--- Tiles ---");
-const tiles = [...document.querySelectorAll(".tile-grid > li > a.tile")];
-check("Exactly 4 tiles render", tiles.length === 4);
+const items = [...document.querySelectorAll(".path-b-list > li.path-b-item")];
+check("Exactly 4 items render", items.length === 4);
 
 const expected = [
   {
@@ -67,17 +67,18 @@ const expected = [
 ];
 
 expected.forEach((exp, i) => {
-  const tile = tiles[i];
-  console.log(`\nTile ${i + 1}: ${exp.title}`);
-  if (!tile) {
-    console.error(`  [FAIL] Tile ${i + 1} does not exist`);
+  const item = items[i];
+  console.log(`\nItem ${i + 1}: ${exp.title}`);
+  if (!item) {
+    console.error(`  [FAIL] Item ${i + 1} does not exist`);
     failures++;
     return;
   }
-  const title = tile.querySelector(".tile__title");
-  const desc = tile.querySelector(".tile__desc");
-  const subline = tile.querySelector(".tile__subline");
+  const title = item.querySelector(".path-b-item__heading a");
+  const desc = item.querySelector(".tile__desc");
+  const subline = item.querySelector(".tile__subline");
   check("Title matches exactly", title && title.textContent.trim() === exp.title);
+  check("Title is inside a heading (screen-reader navigable)", item.querySelector("h3.path-b-item__heading a") !== null);
   check("Description matches exactly", desc && desc.textContent.trim() === exp.desc);
   if (exp.subline === null) {
     check("No sub-line present (Library)", subline === null);
@@ -87,10 +88,10 @@ expected.forEach((exp, i) => {
 });
 
 console.log("\n--- Href fix ---");
-const inclusionTile = tiles[1];
-const inclusionHref = inclusionTile && inclusionTile.getAttribute("href");
+const inclusionItem = items[1];
+const inclusionHref = inclusionItem && inclusionItem.querySelector(".path-b-item__heading a").getAttribute("href");
 console.log(`  Digital Inclusion href = "${inclusionHref}"`);
-check("Digital Inclusion no longer points at finder.html", inclusionHref !== "finder.html");
+check("Digital Inclusion now matches Digital Foundations (both -> finder.html), no longer an accidental Library link", inclusionHref === "finder.html");
 
 console.log("\n--- No rating/confidence/skill-level inputs introduced ---");
 const forbiddenInputs = document.querySelectorAll("select, input[type=radio], input[type=range], input[type=number]");
