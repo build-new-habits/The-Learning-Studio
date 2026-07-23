@@ -85,11 +85,16 @@ expected.forEach((exp, i) => {
   }
 });
 
-console.log("\n--- Href fix ---");
+console.log("\n--- Distinct destinations ---");
+const foundationsItem = items[0];
 const inclusionItem = items[1];
+const foundationsHref = foundationsItem && foundationsItem.querySelector(".path-b-item__heading a").getAttribute("href");
 const inclusionHref = inclusionItem && inclusionItem.querySelector(".path-b-item__heading a").getAttribute("href");
+console.log(`  Digital Foundations href = "${foundationsHref}"`);
 console.log(`  Digital Inclusion href = "${inclusionHref}"`);
-check("Digital Inclusion now matches Digital Foundations (both -> finder.html), no longer an accidental Library link", inclusionHref === "finder.html");
+check("Digital Foundations links to its own dedicated page", foundationsHref === "digital-foundations.html");
+check("Digital Inclusion links to its own dedicated page", inclusionHref === "digital-inclusion.html");
+check("The two are no longer the same destination", foundationsHref !== inclusionHref);
 
 console.log("\n--- No rating/confidence/skill-level inputs introduced ---");
 const forbiddenInputs = document.querySelectorAll("select, input[type=radio], input[type=range], input[type=number]");
