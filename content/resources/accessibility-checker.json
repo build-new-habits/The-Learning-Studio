@@ -1,0 +1,17 @@
+{
+  "id": "accessibility-checker",
+  "version": "22/07/26 v1",
+  "title": "Checking accessibility with Accessibility Checker",
+  "what_it_is": "Accessibility Checker is a built-in Microsoft 365 tool that scans a document, presentation or spreadsheet and flags anything that could be hard for someone using assistive technology to access.",
+  "why_use_it": "It catches common accessibility problems — like missing alt text or a poor heading structure — before a resource is shared, rather than someone finding out afterwards that it doesn't work for them.",
+  "how_to": [
+    "Open your file in Word, PowerPoint or Excel.",
+    "Go to the Review tab and select Check Accessibility.",
+    "Work through the Errors, Warnings and Tips listed in the pane on the right.",
+    "Select each issue to see exactly where it is and how to fix it.",
+    "Re-run the check after making changes to confirm the issues are cleared."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "22/07/26",
+  "review_status": "Draft"
+}
