@@ -1,0 +1,20 @@
+{
+  "id": "immersive-reader",
+  "version": "23/07/26 v1",
+  "title": "Using Immersive Reader for reading support",
+  "what_it_is": "Immersive Reader is a free, built-in Microsoft tool that reads text aloud and simplifies how a page looks, including in Word, OneNote, Teams and Edge.",
+  "why_use_it": "It gives a learner reading support — such as larger text, wider spacing, and a read-aloud voice — inside the document or page they're already using, without needing to install anything extra.",
+  "how_to": [
+    "Open the document, OneNote page, or Teams assignment you want to read.",
+    "Look for the Immersive Reader icon — a book with an outline of a person — usually on the View tab or in the top-right corner of the screen.",
+    "Select the icon to open Immersive Reader.",
+    "Select the Play button to have the text read aloud, or use the on-screen controls to change the voice speed.",
+    "Select Text Preferences to change text size, spacing or the page's colour theme.",
+    "Select Reading Preferences to turn on features such as Line Focus, which highlights one, three or five lines of text at a time.",
+    "Close Immersive Reader by selecting the X or back arrow to return to the original document."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Accessibility & Assistive Technology"
+}
