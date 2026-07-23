@@ -1,0 +1,18 @@
+{
+  "id": "accessible-templates",
+  "version": "23/07/26 v1",
+  "title": "Starting from an accessible template",
+  "what_it_is": "An accessible template is a ready-made Word, PowerPoint or Outlook file that already has the right heading structure, colour contrast and layout built in, so you start from something accessible instead of building it from scratch each time.",
+  "why_use_it": "Starting from an accessible template saves time and reduces the chance of missing an accessibility step, because the structure — headings, contrast, spacing — is already set up correctly before you add your own content.",
+  "how_to": [
+    "Open Word, PowerPoint or Outlook and select File, then New.",
+    "In the search box, type accessible — Microsoft's built-in template library includes templates labelled as accessible.",
+    "Select a template that suits what you're creating, such as an accessible resume, report or presentation layout.",
+    "Add your own content into the existing headings and sections, keeping the same heading levels the template already uses rather than creating new ones from scratch.",
+    "Once you've added your content, run the Accessibility Checker (Review tab, then Check Accessibility) to confirm nothing was accidentally changed."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Accessibility & Assistive Technology"
+}
