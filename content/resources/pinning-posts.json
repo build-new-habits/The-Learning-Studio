@@ -1,0 +1,20 @@
+{
+  "id": "pinning-posts",
+  "version": "23/07/26 v1",
+  "title": "Pinning key posts and resources in a channel",
+  "what_it_is": "Pinning fixes an important post or tab to the top of a Teams channel, so it stays visible and easy to find instead of getting buried under newer posts.",
+  "why_use_it": "It means a learner can always find the most important resource for a channel — like a key document or a set of instructions — without needing to scroll back through the whole conversation history.",
+  "how_to": [
+    "Open Teams and go to the channel containing the post you want to pin.",
+    "Find the post in the conversation, then select the three dots (⋯) that appear when you hover over it.",
+    "Select Pin from the menu that appears.",
+    "The post now stays fixed near the top of the channel, marked with a pin icon, so it's the first thing learners see.",
+    "To pin a file or resource as its own tab instead, select the + at the top of the channel, choose the file or app, then select Save — the tab stays visible across the top of the channel for everyone.",
+    "To remove a pinned post, select the three dots (⋯) on it again and choose Unpin.",
+    "Keep pinned content to genuinely key resources — pinning too many things makes it harder to spot the ones that matter most."
+  ],
+  "source_area": "Digital Foundations / Digital Skills Framework",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Teams & Communication"
+}
