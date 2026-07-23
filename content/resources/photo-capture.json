@@ -1,0 +1,21 @@
+{
+  "id": "photo-capture",
+  "version": "23/07/26 v1",
+  "title": "Capturing and saving a photo to share",
+  "what_it_is": "Photo capture means taking a picture of something — like a whiteboard, a handout or a piece of work — using a laptop's Camera app, the Snipping Tool, or a phone camera, so it can be saved and shared digitally.",
+  "why_use_it": "A quick photo lets you share what happened in a lesson — like notes on a whiteboard — without having to retype or redraw anything.",
+  "how_to": [
+    "On a Windows laptop with a built-in or attached camera: select the Start button (bottom-left of the screen), type Camera, and select the Camera app when it appears.",
+    "Point the camera at what you want to capture, then select the round white button on screen to take the photo.",
+    "The photo saves automatically. To find it, open File Explorer, then go to Pictures, then Camera Roll.",
+    "To capture something already on your screen instead — like a slide or a document — use the Snipping Tool. Select the Start button, type Snipping Tool, and open it.",
+    "Select New, then drag a box around the area of the screen you want to capture. The image copies automatically and a preview window opens where you can save it.",
+    "On a phone: open the Camera app and take the photo as normal.",
+    "If your phone is set up to sync with OneDrive, the photo will upload automatically — open the OneDrive app or website on your laptop to find it under Pictures.",
+    "If it isn't syncing automatically, open the Photos app on your phone, select the photo, and use the Share button to send it to yourself by email or Teams."
+  ],
+  "source_area": "Digital Inclusion / Accessible by Design",
+  "last_reviewed": "23/07/26",
+  "review_status": "Draft",
+  "category": "Device & Windows Basics"
+}
