@@ -6,7 +6,7 @@
   "underlying_needs": [
     "A consistent, predictable structure so learners spend less time searching and more time working",
     "A visual pattern learners can recognise at a glance, alongside clear text labels",
-    "The same resource can sit in more than one place if permissions and findability both stay correct — this is not duplication for its own sake, it's making sure a learner can find what they need from wherever they're looking"
+    "The same resource can appear in more than one place, as long as permissions are set correctly and it's still easy to find. This isn't duplication for its own sake — it means a learner can find what they need from wherever they're looking"
   ],
   "pyramid_layers": ["Digital Foundations"],
   "tech_routes": ["digital"],
@@ -19,11 +19,11 @@
   "learning_lenses": {
     "accessibility": [
       "Colour-coding is paired with clear text labels so meaning never depends on colour alone",
-      "Consistent, predictable structure reduces navigation effort for learners using a screen reader or switch access"
+      "Consistent, predictable structure makes it easier to find your way around if you use a screen reader — software that reads the screen aloud — or switch access — a way of controlling a device without a mouse or touchscreen"
     ],
     "inclusive_practice": [
       "A well-organised, colour-coded space benefits every learner, not only those who ask where to find something",
-      "Reduces how often staff need to repeat the same navigation instructions to individual learners"
+      "Means staff spend less time repeating the same directions to individual learners"
     ]
   },
   "framework_alignment": [
