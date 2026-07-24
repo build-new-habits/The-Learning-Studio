@@ -1,5 +1,13 @@
 /* ==========================================================================
    The Learning Studio — Digital Practice Card renderer
+   24/07/26 v3 — Session 28: related_cards now renders as a "Related
+   resources" section of real links, placed after Framework alignment and
+   before the meta/status footer. Card IDs are unique across every
+   pyramid-layer folder (enforced by scripts/validate.js), not just the
+   current one, so each related ID is resolved by trying the current
+   folder first, then the other known card folders in CARD_DIRS. Empty or
+   absent related_cards renders nothing — same graceful-degradation
+   pattern as every other optional field on this page.
    21/07/26 v2 — Session 10: digital_practices tags now render as a link
    to /content/resources/<id>.html when a matching entry exists in the
    card's optional digital_practice_resources map. Tags with no match
@@ -71,6 +79,69 @@
     return wrap;
   }
 
+  // Card content folders under /content. Card IDs are unique across all of
+  // these (enforced by scripts/validate.js), so a related_cards ID may live
+  // in a different folder to the current card. Add new pyramid-layer folder
+  // names here as they're introduced.
+  var CARD_DIRS = ['digital-foundations', 'digital-inclusion'];
+
+  function currentCardDir() {
+    var parts = window.location.pathname.split('/');
+    return parts[parts.length - 2] || '';
+  }
+
+  // Resolves a related_cards ID to { href, title } by fetching its JSON.
+  // Tries the current folder first (the common, same-layer case), then
+  // falls back to the other known card folders for cross-layer references.
+  // Rejects if the ID cannot be resolved anywhere.
+  function resolveRelatedCard(id) {
+    function fetchCard(jsonUrl, htmlHref) {
+      return fetch(jsonUrl).then(function (response) {
+        if (!response.ok) {
+          throw new Error('not found');
+        }
+        return response.json();
+      }).then(function (data) {
+        return { href: htmlHref, title: data.title || id };
+      });
+    }
+
+    var ownDir = currentCardDir();
+    var attempt = fetchCard(id + '.json', id + '.html');
+
+    CARD_DIRS.filter(function (dir) {
+      return dir !== ownDir;
+    }).forEach(function (dir) {
+      attempt = attempt.catch(function () {
+        return fetchCard('../' + dir + '/' + id + '.json', '../' + dir + '/' + id + '.html');
+      });
+    });
+
+    return attempt;
+  }
+
+  // Builds the "Related resources" section once every ID has resolved (or
+  // failed). Resolves to a section node, or null if nothing resolved —
+  // callers render nothing in that case, same as any other empty field.
+  function renderRelatedCards(ids) {
+    var ul = el('ul', { class: 'practice-card__list' });
+
+    var lookups = ids.map(function (id) {
+      return resolveRelatedCard(id).then(function (info) {
+        var li = el('li');
+        li.appendChild(text('a', { href: info.href }, info.title));
+        ul.appendChild(li);
+      }).catch(function () {
+        // Could not resolve this related card — skip it silently and
+        // let the others render.
+      });
+    });
+
+    return Promise.all(lookups).then(function () {
+      return ul.children.length ? section('Related resources', ul) : null;
+    });
+  }
+
   function renderLearningLenses(lenses) {
     var wrap = el('div');
     var lensLabels = {
@@ -115,6 +186,20 @@
 
     if (data.framework_alignment && data.framework_alignment.length) {
       container.appendChild(section('Framework alignment', list(data.framework_alignment)));
+    }
+
+    // Placeholder is appended now so DOM order stays correct (after
+    // Framework alignment, before the meta footer) even though resolving
+    // each related card is asynchronous. If related_cards is empty or
+    // absent, nothing is ever appended into it.
+    var relatedWrap = el('div', { 'data-related-cards': '' });
+    container.appendChild(relatedWrap);
+    if (data.related_cards && data.related_cards.length) {
+      renderRelatedCards(data.related_cards).then(function (sectionNode) {
+        if (sectionNode) {
+          relatedWrap.appendChild(sectionNode);
+        }
+      });
     }
 
     var meta = el('dl', { class: 'practice-card__meta' });
